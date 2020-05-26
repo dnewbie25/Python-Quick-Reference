@@ -66,6 +66,15 @@ number = 3
 print(f"{string} * {number} is equal to 'TimeTimeTime'") # Prints 'Time * 3 is equal to TimeTimeTime'
 ~~~
 
+This can be used with functions, and methods if you want to.
+
+~~~python 
+first_name = "ada"
+last_name = "lovelace"
+full_name = f"{first_name} {last_name}"
+message = f"Hello, {full_name.title()}!"
+print(message) # Prints 'Hello, Ada Lovelace'
+~~~
 
 
 
