@@ -76,8 +76,104 @@ message = f"Hello, {full_name.title()}!"
 print(message) # Prints 'Hello, Ada Lovelace'
 ~~~
 
+### Adding or Removing Whitespaces
 
+**Newline and Tab**
 
+Within a string you can use *\n* or *\t* to add a new line space or a tab line space
 
+~~~python 
+print("Languages:\n\tPython\n\tC\n\tJavaScript")
+#Prints
+Languages:
+   Python
+   C
+   JavaScript 
+~~~
 
+**Stripping Whitespaces with rstrip( ), lstrip( ) or strip( )**
 
+**rstrip( )**
+
+Removes whitespace at the right end
+
+~~~python
+string = "My python  "
+print(string.rstrip()) " Prints 'My python'
+~~~
+
+**lstrip( )**
+
+Removes whitespace at the left end
+
+~~~python
+string = "  My python"
+print(string.rstrip()) " Prints 'My python'
+~~~
+
+**strip( )**
+
+Removes whitespaces at both ends
+
+~~~python
+string = "  My python  "
+print(string.strip()) " Prints 'My python'
+~~~
+
+## Length and replace
+
+**len( )**
+
+You can get the number of characters in a string. Keep in mind it also counts the whispaces
+
+~~~python
+s = "12a"
+print(len(s)) #Prints '3'
+~~~
+
+**replace( )**
+
+Replace a specified word with another one. Keep in mind this is case sensitive.
+
+~~~
+s = "This country is the best"
+print(s.replace('country', 'world')) # Prints 'This world is the best'
+~~~
+
+### Other useful methods
+
+~~~python
+# Swap case
+print(s.swapcase())
+
+# Get length
+print(len(s))
+
+# Replace
+print(s.replace('world', 'everyone'))
+
+# Count
+sub = 'h'
+print(s.count(sub))
+
+# Starts with
+print(s.startswith('hello'))
+
+# Ends with
+print(s.endswith('d'))
+
+# Split into a list
+print(s.split())
+
+# Find position
+print(s.find('r'))
+
+# Is all alphanumeric
+print(s.isalnum())
+
+# Is all alphabetic
+print(s.isalpha())
+
+# Is all numeric
+print(s.isnumeric())
+~~~
