@@ -1,0 +1,55 @@
+# Variables
+
+In Python variables can be assigned by using a simple assignment operator '='
+
+~~~python
+my_variable = "Some variable"
+~~~
+
+A variable can be an **Integer, Float, String, Boolean**
+
+~~~python
+my_integer = 10
+
+my_float = 10.54
+
+my_string = "My String"
+
+my_bool = True
+~~~
+
+### Integer and Floats
+
+They represent integer or decimal numbers. You can operate with them, but the result will be converted into a *Float* so if you want
+to keep a number as an *Integer* you can use following methods:
+
+### int() and float()
+
+They convert a number to the specified data type:
+
+~~~python
+int_to_float = float(10) # Prints 10.0
+
+float_to_int = 10.56 #Print 10, removing the decimal part
+~~~
+
+### str()
+
+This can turn a number into a string so you can concatenate strings without any class error, since you can't add text and numbers:
+
+~~~python
+print("Print this " + str(1020) + "as text") # Prints 'Print this 1020 as text'
+
+print("Print this " + 1020 + "as text") # This will throw an error. Python would think you are trying to get the sum of words and letters
+~~~
+
+### print()
+
+This is how you'll make everything be dsplayed by the console
+
+~~~python
+print("Something to print")
+~~~
+
+
+
