@@ -20,8 +20,9 @@ my_bool = True # Used in boolean algebra. It can be True or False
 
 ### Integer and Floats
 
-They represent integer or decimal numbers. You can operate with them, but the result will be converted into a *Float* so if you want
-to keep a number as an *Integer* you can use following methods:
+They represent integer or decimal numbers. You can operate with them, but if you combine *Integers* and *Floats* you will get a *Float* as the result of the specified operation. Also, all divisions will give you a *Float* result.
+
+If you want to keep a number as an *Integer* you can use the following methods:
 
 ### int() and float()
 
