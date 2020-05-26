@@ -27,6 +27,45 @@ print(name.title()) # Prints 'Ada Lovelace'
 
 It's a good practice to convert all the input from users into lower case and then changing it to the most appropriate case according to your program's goal.
 
+### Using Variables in a String
+
+There's a couple of ways to use variables in a String. 
+
+**Concatenation**
+
+The most used way is concatenation (which can be used to add a string to a string), by using the '+' operator.
+
+~~~python
+my_string = "This is my string #"
+my_string2 = " out of 10"
+number = 3
+
+print(my_string + str(number) + "my_string2) # Prints 'This is my string #3 out of 10'
+# Remember that when using strings and numbers you must use str( ) to convert the numerical values into text
+~~~
+
+**Multiplication**
+
+You can repeat a string a number of times by using a asterics. This is the only way to operate a number and a string without using the str( ) method.
+
+~~~python
+string = "Time"
+number = 3
+print(string * number) # Prints 'TimeTimeTime'
+~~~
+
+**f-Strings**
+
+This can be compared to a *template literal* in other programming languages. You can get rid of the '+' operator when concatenating variables in a string by usinf **f"{} {}"**.
+
+Let's say you don't want to repeat *string* like in the previous example, and don't want to use '+' nor str( ). You can just do the following:
+
+~~~python
+string = "Time"
+number = 3
+print(f"{string} * {number} is equal to 'TimeTimeTime'") # Prints 'Time * 3 is equal to TimeTimeTime'
+~~~
+
 
 
 
