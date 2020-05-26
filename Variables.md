@@ -9,13 +9,13 @@ my_variable = "Some variable"
 A variable can be an **Integer, Float, String, Boolean**.
 
 ~~~python
-my_integer = 10
+my_integer = 10 # Numbers WITHOUT a decimal part
 
-my_float = 10.54
+my_float = 10.54 # Numbers WITH a decimal part
 
-my_string = "My String"
+my_string = "My String" # A set of characters between quotes, it can include numbers, i.e. "My string #1"
 
-my_bool = True
+my_bool = True # Used in boolean algebra. It can be True or False
 ~~~
 
 ### Integer and Floats
