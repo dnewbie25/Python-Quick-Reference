@@ -18,7 +18,7 @@ my_string = "My String" # A set of characters between quotes, it can include num
 my_bool = True # Used in boolean algebra. It can be True or False
 ~~~
 
-### Integer and Floats
+## Integer and Floats
 
 They represent integer or decimal numbers. You can operate with them, but if you combine *Integers* and *Floats* you will get a *Float* as the result of the specified operation. Also, all divisions will give you a *Float* result.
 
@@ -33,6 +33,8 @@ int_to_float = float(10) # Prints 10.0
 
 float_to_int = int(10.56) #Print 10, removing the decimal part
 ~~~
+
+## Strings
 
 ### str()
 
@@ -51,6 +53,24 @@ This is how you'll make everything be dsplayed by the console.
 ~~~python
 print("Something to print")
 ~~~
+
+## How to know the data type of a variable
+
+### type()
+
+With type() you can know the data type of a specific variable.
+
+~~~python
+type(10) # Prints <class 'int'>
+
+type(10.56) # Prints <class 'float'>
+
+type("String") #Prints <class 'str'>
+
+type(False) # Prints <class 'bool'>
+~~~
+
+type() can also be used to know if the specified parameter is a list, a tuple, even a dictionary. More about this in their respective sections.
 
 ## Final tips and reminders:
 
