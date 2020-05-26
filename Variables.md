@@ -1,12 +1,12 @@
 # Variables
 
-In Python variables can be assigned by using a simple assignment operator '='
+In Python variables can be assigned by using a simple assignment operator '='.
 
 ~~~python
 my_variable = "Some variable"
 ~~~
 
-A variable can be an **Integer, Float, String, Boolean**
+A variable can be an **Integer, Float, String, Boolean**.
 
 ~~~python
 my_integer = 10
@@ -30,7 +30,7 @@ They convert a number to the specified data type:
 ~~~python
 int_to_float = float(10) # Prints 10.0
 
-float_to_int = 10.56 #Print 10, removing the decimal part
+float_to_int = int(10.56) #Print 10, removing the decimal part
 ~~~
 
 ### str()
@@ -45,11 +45,36 @@ print("Print this " + 1020 + "as text") # This will throw an error. Python would
 
 ### print()
 
-This is how you'll make everything be dsplayed by the console
+This is how you'll make everything be dsplayed by the console.
 
 ~~~python
 print("Something to print")
 ~~~
 
+## Final tips and reminders:
 
+### Multiple assignment
 
+You can create a single line with all of your variables.
+
+~~~python
+x, y, name, is_cool = (1, 2.5, 'John', True)
+~~~
+
+### Basic math
+
+You can use math within a variable. 
+
+~~~python
+a = x + y
+~~~
+
+### Casting
+
+You can assign a value to a variable and change its data type at the same time.
+
+~~~python
+x = str(x)
+y = int(y)
+z = float(y)
+~~~
