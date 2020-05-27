@@ -77,3 +77,26 @@ As you can see, it's not required to finish with an **else**, you can finish a c
 
 **The order of the if...else...elif statements matters. Once it reaches a clause where the expression can be evaluated to True it will stop the execution of the block of if..else code**
 
+## Identity Operators
+
+These ones are very special, because they evaluate not if the values are the same but if their class or type is the same.
+
+**is**
+
+Evaluates if the class or type is the same.
+
+~~~python
+x = 5
+if type(x) is int:
+  print(str(x) + " is an Integer") # Prints '5 isan Integer'
+~~~
+
+**is not**
+
+Evaluates if the class or type is different.
+
+~~~python
+x = 101
+if type(x) is not float:
+  print(str(x) + " is NOT a Float") # Prints '101 is NOT a Float'
+~~~
