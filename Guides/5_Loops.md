@@ -72,3 +72,16 @@ numOfGuests = int(input())
   print('Be sure to have enough room for all your guests.')
 print('Done')
 ~~~
+
+## else Statement
+
+Yes, you read correctly, you can use a **else** within a while loop to execute a line of code once the condition is no longer True.
+
+~~~python
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+~~~
