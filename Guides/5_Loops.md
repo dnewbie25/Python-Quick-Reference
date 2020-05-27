@@ -58,3 +58,17 @@ Depending on the conditions evaluated an expression could be **True** or **False
 **0.0** The same for float zero, **x = 0.0 is False**
 
 **'' or ""** The empty string will be False, **name = '' or name = "" both are False**
+
+A perfect example for Truthy of Falsy values is:
+
+~~~python
+name = '' # Is False
+while not name: # not name could be written as not(name) which is True
+ print('Enter your name:')
+ name = input() # If the user enters a blank string (a backspace because even a single space is considered a character) without typing anything else, the loop will start all over again
+print('How many guests will you have?') # Once the user enters a name, the loop will stop and the program will continue executing
+numOfGuests = int(input())
+ if numOfGuests:
+  print('Be sure to have enough room for all your guests.')
+print('Done')
+~~~
