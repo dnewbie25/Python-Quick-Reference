@@ -3,9 +3,9 @@ This repository contains the basic yet handul information about Python for begin
 
 ## Table of Contents
 
-1. [Variables](Variables.md)
-2. [Strings](Strings.md)
-3. [Numbers](Numbers.md)
-4. [if...else Statements and Boolean Operators](If_Else_and_Booleans.md)
-6. [Loops](Loops.md)
-7. [Lists](Lists.md)
+1. [Variables](Guides/1_Variables.md)
+2. [Strings](Guides/2_Strings.md)
+3. [Numbers](Guides/3_Numbers.md)
+4. [if...else Statements and Boolean Operators](Guides/4_If_Else_and_Booleans.md)
+6. [Loops](Guides/5_Loops.md)
+7. [Lists](Guides/6_Lists.md)
