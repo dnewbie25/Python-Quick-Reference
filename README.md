@@ -8,4 +8,5 @@ This repository contains the basic yet handul information about Python for begin
 3. [Numbers](Guides/3_Numbers.md)
 4. [if...else Statements and Boolean Operators](Guides/4_If_Else_and_Booleans.md)
 6. [Loops](Guides/5_Loops.md)
-7. [Lists](Guides/6_Lists.md)
+7. [Try and Except](Guides/7_Try_and_Except.md)
+8. [Lists](Guides/6_Lists.md)
