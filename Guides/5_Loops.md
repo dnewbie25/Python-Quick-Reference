@@ -4,7 +4,7 @@ Loops are intended to create a repetitive block of code that will execute until 
 
 As with **if...else** statements, loops need a boolean data type to check if the condition was completed or not in order to finish its execution, otherwise it'll keep running forever.
 
-The basic types of loops are **while** and **for** loops. This is a relatively large section, so you can see (While loops)[5_Loops.md#while-loops]
+The basic types of loops are **while** and **for** loops. This is a relatively large section, so you can go directly to [While loops](#while-loops) or [For loops].
 
 ## While Loops
 
@@ -20,7 +20,7 @@ while x < 10:
 # This will print the digits from 0 to 9
 ~~~
 
-## break Statement
+### break Statement
 
 You can use a break statement, no matter if it's inside the loop or nested within an **if...else** statement or a loop inside another loop to tell Python to stop the execution of the loops. (So much 'loop' in a single sentence)
 
@@ -33,7 +33,7 @@ while True: # This won't stop, never
 print("Thank you") 
 ~~~
 
-## continue Statement
+### continue Statement
 
 When the program reaches a **continue** statement, it jumps back to the start of the loop and reevaluates the loop's condition.
 
@@ -49,7 +49,7 @@ while True: # Keeps running forever
  print("Welcome!!") 
  ~~~
 
-## Truthy and Falsy values
+### Truthy and Falsy values
 
 Depending on the conditions evaluated an expression could be **True** or **False**, not both. But there are some values than Python determines as **False**. These are:
 
@@ -73,7 +73,7 @@ numOfGuests = int(input())
 print('Done')
 ~~~
 
-## else Statement
+### else Statement
 
 Yes, you read correctly, you can use an **else** within a while loop to execute a line of code once the condition is no longer True.
 
@@ -85,3 +85,7 @@ while i < 6:
 else:
   print("i is no longer less than 6")
 ~~~
+
+## For Loops
+
+
