@@ -75,7 +75,7 @@ print('Done')
 
 ## else Statement
 
-Yes, you read correctly, you can use a **else** within a while loop to execute a line of code once the condition is no longer True.
+Yes, you read correctly, you can use an **else** within a while loop to execute a line of code once the condition is no longer True.
 
 ~~~python
 i = 1
