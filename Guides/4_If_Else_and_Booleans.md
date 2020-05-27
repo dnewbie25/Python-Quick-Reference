@@ -2,6 +2,16 @@
 
 From now on, if and else statements as well as loops and some other methods will use boolean values to evaluate an instruction. Boolean values can be obtained by comparing two or more expressiones with the following comparison operators.
 
+## Truthy and Falsy values
+
+Depending on the conditions evaluated an expression could be **True** or **False**, not both. But there are some values than Python determines as **False**. These are:
+
+**0** A zero will be evaluated as False, **number = 0 is False**
+
+**0.0** The same for float zero, **x = 0.0 is False**
+
+**'' or ""** The empty string will be False, **name = '' or name = "" both are False**
+
 ## Comparison Operators
 
 **==** Equals to -->  x == y
