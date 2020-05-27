@@ -48,3 +48,13 @@ while True: # Keeps running forever
      break   # If the name is 'Joe' it will print the message and exit the loop, then prints 'Welcome!!'
  print("Welcome!!") 
  ~~~
+
+## Truthy and Falsy values
+
+Depending on the conditions evaluated an expression could be **True** or **False**, not both. But there are some values than Python determines as **False**. These are:
+
+**0** A zero will be evaluated as False, **number = 0 is False**
+
+**0.0** The same for float zero, **x = 0.0 is False**
+
+**'' or ""** The empty string will be False, **name = '' or name = "" both are False**
