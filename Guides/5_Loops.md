@@ -4,7 +4,7 @@ Loops are intended to create a repetitive block of code that will execute until 
 
 As with **if...else** statements, loops need a boolean data type to check if the condition was completed or not in order to finish its execution, otherwise it'll keep running forever.
 
-The basic types of loops are **while** and **for** loops. This is a relatively large section, so you can go directly to [While loops](#while-loops) or [For loops].
+The basic types of loops are **while** and **for** loops. This is a relatively large section, so you can go directly to [While loops](#while-loops) or [For loops](5_Loops.md#for-loops).
 
 ## While Loops
 
