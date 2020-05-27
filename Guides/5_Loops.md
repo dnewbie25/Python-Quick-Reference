@@ -88,4 +88,75 @@ else:
 
 ## For Loops
 
+A **for** loop will execute a specified number of times, opposite to a **while** loop which can be executed forever as long as the condition is True.
 
+One of the key elements of a **for** loop is the function **range( )**, which determines how many times will the for loop execute.
+
+### range( ) Starting, Stopping, and Stepping Arguments
+
+**Starting and Stopping**
+
+If you want a block of code to be executed 6 times, you should do it like this:
+
+~~~python
+for i in range(6): # The i is the counter in the loop, once i is equal to 6 the for loop will stop. The counter starts as 0
+  print("Hello #" + str(i)) # This will print, in a new line each time, 'Hello #0', 'Hello #1'....'Hello #5'
+~~~
+
+You can change the value of *i* by initializing before the for loop, but you can also specify a range inside the **range( )** function, like this:
+
+~~~python
+for i in range(5, 10):
+  print("i is now " + str(i))
+~~~
+
+**NOTE:** Keep in mind the the range function is inclusive-exclusive. In set operations if would be [x,y). This means it will include the first value and not the last value. It range() has only one parameter, it will start as zero (or whatever value 'i' is equal to) and stop before reaching the exact parameter's value.
+
+**Stepping or Customized jumps**
+
+The **range( )** will add 1 to the 'i' variable everytime, but if you want to add 2, 3 or 4 to that variable you can do it by adding a third parameter to our counter (So if you just needed 1 argument to start at zero, not you need to specify it so it won't get confussed with a range withint the range( ) function).
+
+~~~python
+# We  want to count from 0 to 15, adding three every time
+for i in range(0, 16, 3): # Remember that for is inclusive-exclusive, and because we want 15 to get printed we need to stop the loop at 16
+  print(i)  # Prints in a new line each value 0, 3, 6, 9, 12, 15
+~~~
+
+### You can loop through a string or a list
+
+By replacing **range( )** with the name of the string or list you are telling python to loop from 0 all the way through the length of that string or list. You can see this in action in the following **Break and Continue** section.
+
+### Break and Continue
+
+Just like a **while** loop you can stop of jump back to the beginning of the loop by using the **break** or **continue** statements.
+
+**break**
+
+~~~python
+fruits = ["apple", "banana", "cherry"]
+for i in fruits: # As you can see, fruits is used as the range
+  print(i)  # i will take the value of the index, apple, banana or cherry
+  if i == "banana": 
+    break # It will stop the loop if i equals 'banana'
+~~~
+
+**continue**
+
+~~~python
+fruits = ["apple", "banana", "cherry"]
+for i in fruits:
+  if i == "banana":
+    continue  # This one will jump back to the start of the loop, so once it reaches 'banana' it will stop there and start with the next item
+  print(i)  # This will print 'apple', 'cherry'
+~~~
+
+## else Statement
+
+As with **while** loops, **for** loops can have an else statement inside to tell the computer to execute a block of code if the loop has finished.
+
+~~~python
+for x in range(6):
+  print(x)
+else:
+  print("Finally finished!") # Will print this line once the looping finishes
+~~~
