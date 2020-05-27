@@ -160,3 +160,12 @@ for x in range(6):
 else:
   print("Finally finished!") # Will print this line once the looping finishes
 ~~~
+
+## pass Statement
+
+This one is aimed to loops that don't have anything inside them in order to prevent getting an error because a loop cna't be empty.
+
+~~~python 
+for x in [0, 1, 2]:
+  pass
+~~~
