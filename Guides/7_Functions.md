@@ -59,4 +59,42 @@ print(musician) # This one prints 'Dana Smith'
 
 ### Making An Argument Optional
 
+Sometimes it would be necessary to make an argument optional, like when filling out full names. Some people have a middle name and some don't. This code it's a perfect example, because all you need is to declare the paremeter with an =''.
 
+~~~python
+def get_full_name(first_name, last_name, middle_name=''): # middle_name is declared as an empty string
+   if middle_name != '':  # If middle_name is no longer empty, then it'll be added to the full name
+      full_name = f"{first_name} {middle_name} {last_name}"
+   else:
+      full_name = f"{first_name} {last_name}"  # Otherwise just first_name and last_name will be printed
+   return full_name.title() # In case the user enters a wrongly capitalized word
+
+name = get_full_name("Martha", "Stewart", "Carrey")
+print(name)
+~~~
+
+## Local and Global Scope
+
+As with any other programming language, a **local** variable is the one you can find inside a function, which can be used by that specific funtion only. No other function can access or modify it.
+
+A **global** variable is declared outside of any function, so every statement in your program can access it and modify its value at any time.
+
+## Exception Handling
+
+This subject has a chapter completely dedicated to how to handle exceptions in our code. But, to summarize, when using functions you can create an exception rule in case the function execution encounters an error. This way the program won't crash but will handle the exception in order to continue executing.
+
+The basic form of en exception is the **try...except** statement. But in order to use this statement you must first know the error you want to avoid.
+
+For instance, if you divide a number by zero in Python, you would get a 'ZeroDivisionError:'. This is the error's name. You want to use this error name when creating the exception. Let's just make a simple code to show it:
+
+~~~python
+def spam(divideBy):
+ try:
+  return 42 / divideBy
+ except ZeroDivisionError:
+  print('Error: Invalid argument.')
+
+print(spam(42)) # Prints 1
+print(spam(150)) # Prints 0.28
+print(spam(0)) # Prints 'Error: Invalid argument.' --> This would allow your program to continue executing without crashing
+~~~
