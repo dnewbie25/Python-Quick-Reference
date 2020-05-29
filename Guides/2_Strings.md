@@ -120,6 +120,15 @@ string = "  My python  "
 print(string.strip()) " Prints 'My python'
 ~~~
 
+**end=''**
+
+With this little instruction at the end of a **print( )** function you can get rid of the newline that Python adds after each **print**.
+
+~~~python
+print("Hello", ned='')
+print("World") # Prints 'HelloWorld'
+~~~
+
 ## Length and replace
 
 **len( )**
