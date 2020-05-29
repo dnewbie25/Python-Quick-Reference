@@ -109,7 +109,7 @@ motorcycles.pop(2) # Removes 'suzuki'
 print(motorcycles) # Prints ['honda', 'yamaha', 'bmw']
 ~~~
 
-**How to choose between *del* and *pop( )*? 
+**How to choose between *del* and *pop( )*?** 
 
 Simple. If you want to use the deleted item, use **pop( )**. but if you want to remove the item forever and don't want to use later in any way, use **del**.
 
