@@ -99,3 +99,40 @@ high_end_motorcycles.append(numbers.pop()) # Yes! You can combine functions. You
 print(motorcycles) # Prints ['honda', 'yamaha', 'suzuki']
 print(high_end_motorcycles) # Prints ['bmw']
 ~~~
+
+**pop( ) can be used to delete any item in the list too** by using the index inside the paranthesis:
+
+~~~python
+motorcycles = ['honda', 'yamaha', 'suzuki', 'bmw']
+motorcycles.pop(2) # Removes 'suzuki'
+
+print(motorcycles) # Prints ['honda', 'yamaha', 'bmw']
+~~~
+
+**How to choose between *del* and *pop( )*? 
+
+Simple. If you want to use the deleted item, use **pop( )**. but if you want to remove the item forever and don't want to use later in any way, use **del**.
+
+#### remove( ) - Deletes an item by its value
+
+Many time syou won't know the index of a value, but it's really rare not to know the value or string you want to delete, so here comes **remove( )** to save your life.
+
+~~~python 
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati'] 
+
+motorcycles.remove('yamaha')
+print(motorcycles) # Prints ['honda', 'suzuki', 'ducati'] 
+~~~
+
+You can even use **remove( )** to use the item to delete:
+
+~~~python
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati'] 
+
+high_end_moto = 'ducati'
+motorcycles.remove(high_end_moto)
+print(f"{high_end_moto} is too expensive for me, maybe I could buy one of these:{motorcycles}") # Prints 'ducati is too expensive for me, maybe I could buy oe of these:['honda', 'yamaha', 'suzuki']'
+~~~
+
+**NOTE:** The remove( ) method deletes just the first element it encounters with that value. If the element appears more than one time you might need to create a loop to get rid of all of its occurences.
+
