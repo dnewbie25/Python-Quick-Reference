@@ -125,7 +125,7 @@ print(string.strip()) " Prints 'My python'
 With this little instruction at the end of a **print( )** function you can get rid of the newline that Python adds after each **print**.
 
 ~~~python
-print("Hello", ned='')
+print("Hello", end='')
 print("World") # Prints 'HelloWorld'
 ~~~
 
