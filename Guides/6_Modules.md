@@ -7,7 +7,7 @@ The basic syntax for a module is **import *NameOfModule***. This one should be p
 ~~~python
 import random # The import is the basic structure. This one imports the random module so you can use its functions to create random numbers, order lists or strings randomly among other useful functions
 for i in range(5):
- print(random.randint(1, 10)) # random.randint() is a function from the random module. It takes a random integer between the specified range
+ print(random.randint(1, 10)) # random.randint() is a function from the random module. It takes a random integer between the specified range inclusive [1,10]
 ~~~
 
 You can import multiple modules at the same time:
