@@ -152,13 +152,13 @@ colors.sort()
 print(colors) # Prints ['blue', 'green', 'red', 'yellow'] 
 ~~~
 
-**sorted( )**, on the other hand, does not modify the original item forever.
+**sorted( )**, on the other hand, does not modify the original item forever. Note that in *sorted( )* the list must be called inside the parenthesis.
 
 ~~~python
 colors = ['red', 'blue', 'green', 'yellow']
 print(colors) # Prints ['red', 'blue', 'green', 'yellow']
 
-print(colors.sorted()) # Prints ['blue', 'green', 'red', 'yellow'] --> As you can see it sorts the list but doesn't change the original one
+print(sorted(colors)) # Prints ['blue', 'green', 'red', 'yellow'] --> As you can see it sorts the list but doesn't change the original one
 
 print(colors) # Prints ['red', 'blue', 'green', 'yellow'], the original list
 ~~~
