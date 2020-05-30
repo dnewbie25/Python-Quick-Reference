@@ -10,7 +10,7 @@ ties = 0
 while tries < 5: # 5 attempts
   print("Choose rock (r), paper (p) or scissors (s) by pressing the respective key")
 
-  computer_choice = random.randint(0,3) # Will choose from 0 to 2 inclusive
+  computer_choice = random.randint(0,2) # Will choose from 0 to 2 inclusive
 
   if computer_choice == 0:
     print("Computer chose Rock")
