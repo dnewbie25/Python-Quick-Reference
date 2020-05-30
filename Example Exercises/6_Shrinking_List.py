@@ -69,7 +69,8 @@ print(f"Sorry, {removed4}. You can't come to the party")
 
 print(f"\n\n{guests[0]} and {guests[1]}, you are still invited")
 
-del guests[0]
-del guests[1]
-
+del guests[0] # Deletes the first of the two remaining invitees
 print(guests)
+del guests[0] # Once you delete the first element, the second one takes its place as the first one, so we use this again
+
+print(guests) # Returns an empty array
