@@ -136,3 +136,90 @@ print(f"{high_end_moto} is too expensive for me, maybe I could buy one of these:
 
 **NOTE:** The remove( ) method deletes just the first element it encounters with that value. If the element appears more than one time you might need to create a loop to get rid of all of its occurences.
 
+## Organizing A List
+
+As with any set of elements, we can present it unordered, which is not very professional, or ordered in numerical or alphabetical order. For our sake, Python implements a couple of methods to sort lists which can be really handful.
+
+#### sort( ) and sorted( ) - Mutable and unmutable methods
+
+The are some methods that modify the original element, *mutable methods*, and some that doesn't, *unmutable methods*.
+
+**sort( )** is a mutable one. It modifies the original list forever when sorts it.
+
+~~~python
+colors = ['red', 'blue', 'green', 'yellow']
+colors.sort()
+print(colors) # Prints ['blue', 'green', 'red', 'yellow'] 
+~~~
+
+**sorted( )**, on the other hand, does not modify the original item forever.
+
+~~~python
+colors = ['red', 'blue', 'green', 'yellow']
+print(colors) # Prints ['red', 'blue', 'green', 'yellow']
+
+print(colors.sorted()) # Prints ['blue', 'green', 'red', 'yellow'] --> As you can see it sorts the list but doesn't change the original one
+
+print(colors) # Prints ['red', 'blue', 'green', 'yellow'], the original list
+~~~
+
+#### (reverse = True) and reverse( ) - Sort in Reverse Order
+
+If you want to sort backwards in numerical of alphabetical order, from the greater value to the lowest one, or from 'Z' to 'A' you must add **reverse = True** inside the **sort( )** methods.
+
+~~~python
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True)
+print(cars) # Prints ['toyota', 'subaru', 'bmw', 'audi'] 
+~~~
+
+But, on the other hand, if you want to order from last index to first index, you have to use **reverse( )**. This one modifies the original list (mutable method) with the last element as the first one, the second last element as the second one and so on.
+
+~~~python
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars) # Prints ['bmw', 'audi', 'toyota', 'subaru']
+
+cars.reverse() # Reverse the list from last index to first one
+print(cars) # Prints ['subaru', 'toyota', 'audi', 'bmw'] # As you can see, they are not in alphabetical order. It literally reversed the list
+~~~
+
+## Finding The Length Of A List
+
+If you want to know the length of a list, you just need to use the same method you use for the length of a string, **len( )**. This method will count as humans do, starting with 1.
+
+~~~python
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars)) # Prints 4
+~~~
+
+## Avoiding Index Error
+
+If you played a bit with indexes you might have found that when you try to access an index that does not exist you get a *IndexError* in the console. You can handle this kind of issues in order to not crashing your program in a similar you saw in the *Functions* chapter.
+
+~~~python
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[3])
+~~~
+
+Te previous code will return:
+
+~~~python
+Traceback (most recent call last):
+ File "motorcycles.py", line 2, in <module>
+ print(motorcycles[3])
+IndexError: list index out of range # This is the name of the error
+~~~
+
+Remember that computers start counting at zero but whe start at 1. SO if your list has 3 elements, the last index would be two, because for a computer the indexes are 0, 1 and 2.
+
+If you need the last item of a list but don't remember how many items it has, you can search with **negative numbers** like **-1**. This way the interpreter will search from the first item at the end of the list:
+
+~~~python
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[-1]) # This will print 'suzuki'
+print(motorcycles[-3]) # This will print 'honda'
+~~~
+
+See that in this case the first item, when counting in negative numbers, has the value of -3. Remember that negative numbers don't include the zero, and the computer will start from -1.
+
+If you find issues when working with the indexes in a list, it's really helpful to print the **length of the list** to see if you are working with the right number of indexes.
