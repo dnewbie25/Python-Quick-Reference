@@ -173,6 +173,17 @@ cars.sort(reverse=True)
 print(cars) # Prints ['toyota', 'subaru', 'bmw', 'audi'] 
 ~~~
 
+You can even use the **reverse = True** inside the **sorted( )** method if you don't want to change the original list order.
+
+~~~python
+colors = ['red', 'blue', 'green', 'yellow']
+print(colors) # Prints ['red', 'blue', 'green', 'yellow']
+
+print(sorted(colors, reverse = True)) # Prints ['yellow', 'red', 'green', 'blue'] --> As you can see it sorts the list but doesn't change the original one
+
+print(colors) # Prints ['red', 'blue', 'green', 'yellow']
+~~~
+
 But, on the other hand, if you want to order from last index to first index, you have to use **reverse( )**. This one modifies the original list (mutable method) with the last element as the first one, the second last element as the second one and so on.
 
 ~~~python
