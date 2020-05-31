@@ -140,9 +140,9 @@ print(f"{high_end_moto} is too expensive for me, maybe I could buy one of these:
 
 As with any set of elements, we can present it unordered, which is not very professional, or ordered in numerical or alphabetical order. For our sake, Python implements a couple of methods to sort lists which can be really handful.
 
-#### sort( ) and sorted( ) - Mutable and unmutable methods
+#### sort( ) and sorted( ) - Mutable and immutable methods
 
-The are some methods that modify the original element, *mutable methods*, and some that doesn't, *unmutable methods*.
+The are some methods that modify the original element, *mutable methods*, and some that doesn't, *immutable methods*.
 
 **sort( )** is a mutable one. It modifies the original list forever when sorts it.
 
