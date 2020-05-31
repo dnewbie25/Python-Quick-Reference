@@ -234,3 +234,72 @@ print(motorcycles[-3]) # This will print 'honda'
 See that in this case the first item, when counting in negative numbers, has the value of -3. Remember that negative numbers don't include the zero, and the computer will start from -1.
 
 If you find issues when working with the indexes in a list, it's really helpful to print the **length of the list** to see if you are working with the right number of indexes.
+
+## Looping Through A List
+
+**for** is the loop you want to use with lists, because it allows you to go through each element in the list without major issues:
+
+~~~python
+my_pets = ['cat', 'dog', 'parrot', 'snake']
+
+for pet in my_pets: # This creates a variable 'pet' to save the value at the specified index the loop is evaluating
+ print("I have a " + pet) # This uses the 'pet' vairable to print the name of the pet at that index
+~~~
+
+## Numerical Lists
+
+Lists can be very useful when working with numerical values, so as in the **loop** section, the **range( )** function can be use to count elements in a list. Remember this range( ) function is inclusive-exclusive, [x, y).
+
+~~~python
+my_pets = ['cat', 'dog', 'parrot', 'snake', 'horse', 'monkey', 'hamster']
+
+for favorite in range(1,5): # This one loops from index one through index 4, and stops when reaches index 5.
+ print("My favorite pet is " + favorite) # Prints from 'dog' to 'horse' --> [1, 5)
+~~~
+
+#### Creating Numerical Lists
+
+You can create numerical lists easily using the **range( )** function too and the **list( )** function.
+
+~~~python
+my_range = list(range(1,11))
+prints(my_range) # Prints [1,2,3,4,5,6,7,8,9,10], remember [1, 11)
+~~~
+
+As with the *range( )* used in the loops, you can modify the increment value by passing a third parameter. For example, let's create a list from 1 to 10 that prints just the even numbers:
+
+~~~python
+evens = list(range(2, 11, 2)) # Starts at 2 inclusive until 11 exclusive, [2, 11), and increases by 2 every following item
+print(evens) # Prints [2,4,6,8,10]
+~~~
+
+#### min, max and sum
+
+You can find the minimun, maximun and the sum of all the numerical elements in a list:
+
+~~~python
+numbers = [1,2,3,4,5,6,7,8,9,10]
+print(min(numbers)) # Prints 0
+print(max(numbers)) # Prints 10
+print(sum(numbers)) # Prints 55
+~~~
+
+## List Comprehensions
+
+There's a concept that simplyfies the way you create lists. For exampe, if you want to create a list which contains all the squares from 1 to 10, you can¿t use the **list( )** instruction. You would need to use a **for** loop:
+
+~~~python
+squares = []
+
+for number in range(1,11): # Creates a simple for loop from 1 to 10 inclusive
+ squares.append(number**2) # Appends each numbers's square
+ 
+print(squares) # Prints [1,4,9,16,25,36,49,64,81,100]
+~~~
+
+But, imagine that the list you want to create has a lot of lines in a for loop. We can just create the list in a simpler way. For example, if we want to create the same list for suqares, we could use **list comprehension** to do so:
+
+~~~python
+squares = [number**2 for number in range(1,11)]  # It defines that each number will be squared in a range from [1,11)
+print(squares) # Prints [1,4,9,16,25,36,49,64,81,100]
+~~~
