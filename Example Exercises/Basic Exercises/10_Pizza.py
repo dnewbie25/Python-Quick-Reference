@@ -4,7 +4,7 @@ for pizza in pizzas: # Loops through all the pizzas and prints the values at eac
   print("One of my favorite pizzas is " + pizza)
 
 # Prints 3 lines separarated by the \n command
-print("I love the meat\nThe cheese is wonderful\nAnd the ingredients are so fresh!\I just love pizza\n\n")
+print("I love the meat\nThe cheese is wonderful\nAnd the ingredients are so fresh!I just love pizza\n\n")
 
 animals = ['lion', 'zebra', 'tiger']
 
