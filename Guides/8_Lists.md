@@ -303,3 +303,74 @@ But, imagine that the list you want to create has a lot of lines in a for loop. 
 squares = [number**2 for number in range(1,11)]  # It defines that each number will be squared in a range from [1,11)
 print(squares) # Prints [1,4,9,16,25,36,49,64,81,100]
 ~~~
+
+## Slice
+
+If you want to use just a part of the list you can slice it by specifying the **[start : end]** of the slice, with that syntax. This works inclusive-exclusive, like the **range( )** method.
+
+~~~python
+players = ['charles', 'martina', 'michael', 'florence', 'eli'] 
+
+print(players[0:4]) # Prints ['charles','martina', 'michael', 'florence']
+
+print(players[:4]) # When ou don't put a zero Python assumes you meant [0:whatever_value]
+~~~
+
+You can also set the start of the slice with no end, **[start : ]**:
+
+~~~python
+players = ['charles', 'martina', 'michael', 'florence', 'eli', 'dani', 'lorenzo', 'victor', 'rachel'] 
+
+print(players[3:]) # Prints ['florence', 'eli', 'dani', 'lorenzo', 'victor', 'rachel']
+~~~
+
+**You can slice with negative numbers** too. It does not print backwards. It prints the last *n* elements but in the same order they appear in the original list.
+
+~~~python
+players = ['charles', 'martina', 'michael', 'florence', 'eli', 'dani', 'lorenzo', 'victor', 'rachel'] 
+
+print(players[-5:]) # Prints ['eli', 'dani', 'lorenzo', 'victor', 'rachel'] 
+~~~
+
+#### Loop A Slice
+
+You can loop a slice as if it were the range of the **for** loop:
+
+~~~python
+players = ['charles', 'martina', 'michael', 'florence', 'eli', 'dani', 'lorenzo', 'victor', 'rachel'] 
+
+for winner in  players[:3]:
+ print("You classify to the next round, " + winner) # This will print the text starting with 'charles' and finishing with 'michael', [0:3)
+~~~
+
+## Copying A List
+
+If you want to create a list, you might think about using *copy_list = my_list*, but this will make both variables point to the same list. If you want to copy a list in order to work separately from the original one, you must use **[ : ]**:
+
+~~~python
+# If you modify my_foods_1, then you will be modifying friends_food_1 at the smate time
+
+my_foods_1 = ['pizza', 'falafel', 'carrot cake']
+friends_foods_1 = my_foods_1
+
+my_foods_1.append('cannoli')
+friends_foods_1.append('ice cream')
+
+print("My favorite foods are:")
+print(my_foods_1)  # Prints ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+print("\nMy friend's favorite foods are:")
+print(friends_foods_1) # Prints ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+
+# But if you use [ : ] then you could use each list independently
+
+my_foods_2 = ['pizza', 'falafel', 'carrot cake']
+friends_foods_2 = my_foods_2[:]
+
+my_foods_2.append('cannoli')
+friends_foods_2.append('ice cream')
+
+print("My favorite foods are:")
+print(my_foods_2)  # Prints ['pizza', 'falafel', 'carrot cake', 'cannoli']
+print("\nMy friend's favorite foods are:")
+print(friends_foods_2) # Prints ['pizza', 'falafel', 'carrot cake', 'ice cream']
+~~~
