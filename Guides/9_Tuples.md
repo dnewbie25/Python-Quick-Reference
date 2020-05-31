@@ -34,6 +34,17 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ~~~
 
+## Accessing Elements
+
+Although tuples are defined with parenthesis, you need to use square brackets **[ ]** to access its elements:
+
+~~~python
+numbers = (2,65,8,2,4,7,5)
+print(numbers[3]) # Prints 2
+
+prints(numbers(5)) # Error
+~~~
+
 ## Looping Tuples
 
 You can loop through a tuple the same way as with a list. Literally.
