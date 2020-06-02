@@ -20,7 +20,9 @@ You can create an empty dictionary by defining it, as if it were a normal list:
 alien = {}
 ~~~
 
-## Accessing Values
+## Accessing Keys And Values
+
+#### Values
 
 You can access a value as if it were an element in a regular list by using [ ], but, you need to specify the key, not the index.
 
@@ -33,6 +35,23 @@ print(alien['color']) # Prints 'grey'
 new_life_points = alien['life points']
 print(f"You alien has {new_life_points} life points. Find cover!!") 
 ~~~
+
+### get( ) - Access Values
+
+You can also get the value of a pais by using the **get( )** method. This one could be very useful because it allows you to put a fallback option in case the key doesn't exist, just use it as a second argument like **dictionary.get(key, optional_argument)**.
+
+~~~python
+# First, let's take a look at what would happen if the key doesn't exist
+alien = {'color' : blue, 'size' : 'giant'}
+print(alien['weapon']) # This one would print 'KeyError: 'weapon'' because there's no such key in the dictionary
+
+# Now, using get( ) it would look like this
+alien = {'color' : blue, 'size' : 'giant'}
+select_alien = alien.get('weapon', 'No weapon assigned')
+print(alien.get()) # Prints 'No weapon assigned', but in this case it won't cause an error
+~~~
+
+#### Keys
 
 ## Adding New Key-Value Pairs
 
