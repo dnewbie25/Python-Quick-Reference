@@ -51,8 +51,6 @@ select_alien = alien.get('weapon', 'No weapon assigned')
 print(alien.get()) # Prints 'No weapon assigned', but in this case it won't cause an error
 ~~~
 
-#### Keys
-
 ## Adding New Key-Value Pairs
 
 You can add a new key-value pair by just creating it. Think like you want to access to a value that hasn't been created yet...in lists you would get an IndexError, but in dictionaries you will end up creating that key-value pair. Let me show you with this example, where I'll add the X and Y position of the alien in the screen:
