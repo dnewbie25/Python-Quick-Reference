@@ -116,3 +116,78 @@ alien = { 'color' : 'grey', 'life points' : 120, 'weapon' : 'railgun'}
 del alien['weapon']
 print(alien) # Prints { 'color' : 'grey', 'life points' : 120}
 ~~~
+
+## Looping Through A Dictionary
+
+You can use a ***for*** loop as with any regular list, but there are a couple of useful ways to use it with dictionaries.
+
+#### items( ) - Loop through each key and value
+
+If you need to output the key and the value of each dictionary's elements, you can use one of the following two approaches:
+
+~~~python
+favorite_languages = { 
+  'Tim' : 'Spanish',
+  'Martha' : 'Finnish',
+  'Lucy' : 'German'}
+  
+# The logical approach
+
+for key in favorite_languages:
+  print(f"{key}'s favorite language is {favorite_languages[key]}") # Prints, for example, 'Tim's favorite language is Spanish'
+  
+# Using items( )
+
+for key, value in favorite_languages.items(): 3 Creates a 'key' and a 'value' variable for keys and values respectively
+  print(f"{key}'s faovrita language is {value}") # Prints the same as the above, but is more easy to read
+~~~
+
+#### keys( ) - Loop through all Keys
+
+If you want to work just with the keys and don't need the values yet, **key( )** is the method to use.
+
+~~~python
+favorite_languages = { 
+  'tim' : 'Spanish',
+  'martha' : 'Finnish',
+  'lucy' : 'German'}
+  
+# Loop through keys, prints them and change the case
+
+print("My students are :")
+
+for names in favorite_languages.keys(): # Creates a 'names' variable
+  print(f"\n {names.title()}") # Capitalize each name
+~~~
+
+**NOTE:** Also. keep in mind that when looping through a dictionary, the default looping in Python is the **keys( )**, so even if you don't put the keys( ) at the end, python will assume you need the keys only:
+
+~~~python
+print("My students are :")
+
+for names in favorite_languages: # See that we don't need to use the keys( )
+  print(f"\n {names.title()}") # Capitalize each name
+~~~
+
+#### Sorting Keys In A Loop
+
+Remember that a dictionary will keep is order when you try to print it with a loop, so, in order to sort your dictionary we can use a previous function that doesn't modify the original list while sorting...**sorted( )**:
+
+~~~python
+programming_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+ 
+ # We want to print this list sorted
+ 
+ for names in sorted(programming_languages.keys()):
+  print(f"{names.title()}, thanks for telling us your favorite language")
+# This will print in the following order:
+ Edward, thanks for telling us your favorite language
+ Jen, thanks for telling us your favorite language
+ Phil, thanks for telling us your favorite language
+ Sarah, thanks for telling us your favorite language
+~~~
