@@ -184,8 +184,8 @@ programming_languages = {
  for names in sorted(programming_languages.keys()):
   print(f"{names.title()}, thanks for telling us your favorite language")
 # This will print in the following order:
- Edward, thanks for telling us your favorite language
- Jen, thanks for telling us your favorite language
- Phil, thanks for telling us your favorite language
- Sarah, thanks for telling us your favorite language
+# Edward, thanks for telling us your favorite language
+# Jen, thanks for telling us your favorite language
+# Phil, thanks for telling us your favorite language
+# Sarah, thanks for telling us your favorite language
 ~~~
