@@ -90,3 +90,37 @@ for topping in ingredients['toppings']:
 # cheese
 # pineapple
 ~~~
+
+**NOTE:** Do not try to use nesting inside nesting inside another nesting. If you have too much levels of nesting if would be confussing.  Almost 99.9% of the times you shouldn't nesting more deeply than what you read in this section. If you think you need to nest even more deeply, certainly a better way to solve the problem exist. **Aim for readability**.
+
+## Dictionary Inside Dictionary
+
+You should be careful with this method of nesting, since it can't become very difficult to read after nesting too much dictionaries.
+
+When could you use a dictionary inside a dictionary? An example could be when you have the information of your users and you want to display it in the console. The key will be the username and the value will be a dictionary with all their basic information, like this:
+
+~~~python
+# When nesting dictionaries try to use this indentation to make it readable
+my_users = {
+    'dphilip89' : {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+        },
+     'rachelAm' : {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        }, # It's a good practice to put a comma at the end of your last dictionary when doing this nesting
+ }
+ 
+for username, info in my_users.items(): # Loop through the parent dictionary. The 'info' variable would be equal to the nested dictionaries
+  print(f"\nUsername: {username}")
+  print("Information: ")
+  
+  full_name = f"{info['first']} {info['last']}"  # The 'info' variable holds the values, which are other dictionaries
+  location = f"{info['location']}"
+  
+  print(f"\t\tFull name: {full_name}")
+  print(f"\t\tLocation: {location}")
+~~~
