@@ -67,3 +67,26 @@ ingredients = {'dough' : ['corn powder', 'flour'],
  # Yes, it could take more time to create a dictionary like this, but you'll save hours when looking for a specific element. Planning is the key to success
 ~~~
 
+#### Accessing Elements with [ ]**[ ]**
+
+By using, in this case **ingredients[]*[]** you can define the key to access and the list element you want. For exmaple if I want to access 'pineapple' I use **ingredients['toppings']*[2]**. This way Python will search in the key *toppings* for the last index of the list, *pineapple*.
+
+**And how can you use the above dictionary?**
+
+Like this:
+
+~~~python
+ingredients = {'dough' : ['corn powder', 'flour'],
+                'toppings' : ['lettuce', 'cheese', 'pineapple'],
+                'sauce' : ['tomatoe', 'napolitan', 'alfredo']}
+ # Print the order
+print(f"You ordered a pizza with {ingredients['dough'][0]} dough and with these toppings:")
+ 
+for topping in ingredients['toppings']:
+  print(topping)
+# This will print: 
+# You ordered a pizza with corn powder dough and with these toppings:
+# lettuce
+# cheese
+# pineapple
+~~~
