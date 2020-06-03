@@ -189,3 +189,44 @@ programming_languages = {
 # Phil, thanks for telling us your favorite language
 # Sarah, thanks for telling us your favorite language
 ~~~
+
+#### values( ) - Looping through all Values
+
+If you want the values only and don't plan to use the keys for any reason, you can just use the **values( )**. For example, if we want to know the programming languages used but not the person who uses that language, we can simply do this:
+
+~~~python
+programming_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+ 
+ print("These are the programming languages used: ")
+ for language in programming_languages.values(): # Loop through all the values only
+  print(language.title()) # Prints the language capitalized
+# Python
+# C
+# Ruby
+# Python
+~~~
+
+#### set( ) - Check for unique Values
+
+With the above **values( )** method we would get a list of all values, no matter if a value is repeated. If you want to print the values without repetition just do this:
+
+~~~python
+programming_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+ 
+ print("All the unique languages are:")
+ for language in set(programming_languages.values()): # set( ) makes possible to print a value without repeating it in case another key has the same value
+  print(language.title()) # Prints the languages one time per value
+# Python
+# C
+# Ruby
+~~~
