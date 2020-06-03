@@ -110,3 +110,15 @@ x = 101
 if type(x) is not float:
   print(str(x) + " is NOT a Float") # Prints '101 is NOT a Float'
 ~~~
+
+## Membership Operators
+
+Thise ones would be helpful when you want to know if an elements is inside a list or a dictionary...you'll need them later.
+
+**in**
+
+Returns *True* if a sequence of the specified characters is found.
+
+**not in**
+
+Opposito to **in**, returns *True* is the specified element **is not found**.
