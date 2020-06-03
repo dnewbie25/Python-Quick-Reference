@@ -49,3 +49,28 @@ print(f"You ordered a pizza with {ingredients['dough'][0]} dough and with these 
  
 for topping in ingredients['toppings']:
   print(topping)
+
+####################### Dictionaries Inside Dictionaries ######################################
+print("\n\n")
+my_users = {
+    'dphilip89' : {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+        },
+     'rachelAm' : {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        }, # It's a good practice to put a comma at the end of your last dictionary when doing this nesting
+ }
+ 
+for username, info in my_users.items(): # Loop through the parent dictionary. The 'info' variable would be equal to the nested dictionaries
+  print(f"\nUsername: {username}")
+  print("Information: ")
+  
+  full_name = f"{info['first'].title()} {info['last'].title()}"  # The 'info' variable holds the values, which are other dictionaries
+  location = f"{info['location']}"
+  
+  print(f"\t\tFull name: {full_name}")
+  print(f"\t\tLocation: {location.title()}")
