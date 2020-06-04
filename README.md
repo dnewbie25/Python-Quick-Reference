@@ -9,11 +9,13 @@ Once you have read all of my guides, let's move to the *Example Exercises* folde
 
 ## Table of Contents
 
-1. [Variables](Guides/1_Variables.md)
-2. [Strings](Guides/2_Strings.md)
-3. [Numbers](Guides/3_Numbers.md)
-4. [if...else Statements and Boolean Operators](Guides/4_If_Else_and_Booleans.md)
-6. [Loops](Guides/5_Loops.md)
-7. [Modules](Guides/6_Modules.md)
-8. [Functions](Guides/7_Functions.md)
-9. [Lists](Guides/8_Lists.md)
+1.  [Variables](Guides/1_Variables.md)
+2.  [Strings](Guides/2_Strings.md)
+3.  [Numbers](Guides/3_Numbers.md)
+4.  [if...else Statements and Boolean Operators](Guides/4_If_Else_and_Booleans.md)
+6.  [Loops](Guides/5_Loops.md)
+7.  [Modules](Guides/6_Modules.md)
+8.  [Functions](Guides/7_Functions.md)
+9.  [Lists](Guides/8_Lists.md)
+10. [Dictionaries and Structuring Data](Guides/10_Dictionaries_And_Structuring_Data.md)
+11. [Nesting Dictionaries and Lists](Guides/11_Nesting_Dictionaries_And_Lists.md)
