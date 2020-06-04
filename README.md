@@ -26,7 +26,7 @@ Once you have read all of my guides, let's move to the *Example Exercises* folde
 
 I won't explain much about the code in the examples. The best way to learn what the code does is to type it yourself in you own IDE (do not copy it, type it) and explore what it does, what's its purpose.
 
-1.  [Guess The Number](Example Exercises/Basic Exercises/1_Guess_the_number.py): This is a basic guessing game where you can enter a number and see if it matches the one selected by the computer. A good practice for conditionals.
+1.  [Guess The Number](Example%Exercises/Basic%Exercises/1_Guess_the_number.py): This is a basic guessing game where you can enter a number and see if it matches the one selected by the computer. A good practice for conditionals.
 2.  (Rock, Paper and Scissors)[Example Exercises/Basic Exercises/2_Rock_Paper_Scissors.py]: You can go deeper into programming logic by recreating a simple game. Here you can practice conditionals and loops.
 3.  (Guest List)[Example Exercises/Basic Exercises/3_Guest_List.py]: You'll create a list of the people you want to invite to a party.
 4.  (Changing Guest List)[Example Exercises/Basic Exercises/4_Changing_Guest_List.py): You will modify the previous list, removing a random person and adding a totally different one.
