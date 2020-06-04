@@ -27,7 +27,7 @@ def player():
     print("Wrong value. Try again") # If the user enters an invalid value, this will send False
     return False
 
-# Create 1 round
+# Determine if the player wins, losses or ties
 
 def match(user, machine):
   if user == 'rock': # Player chooses ROCK
