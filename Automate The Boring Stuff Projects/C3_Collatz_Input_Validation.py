@@ -9,7 +9,7 @@ def collatz(number):
 # User enters a number
 
 def user_input(): 
-  try:  # The user has 1 one try to not crash the program
+  try:  # The user has one try to not crash the program
     number = int(input("Enter an integer number: "))
     return number
   except ValueError: # If the input is not a number the try will be given to user. 
