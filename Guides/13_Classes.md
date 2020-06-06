@@ -39,7 +39,33 @@ The *__init__()* is a special method that Python runs automatically every time w
 
 **Parameters inside __init__()**: This method has a special parameter, **self**. This one gives access to the instance to every function in the class it is calling. When we cant to use the Dog class we will pass only name and age because *self* will run automatically.
 
-**3-** We create a method sit() with the parameter *self*. This way the sit method will have access to a variable that was defined in the function *__init__*. Remember there are local and global variables. The *self* allows every function inside the class to access the variables inside the *__init__()*.
+**3 and 4-** We create a method sit() with the parameter *self*. This way the sit method will have access to a variable that was defined in the function *__init__*. Remember there are local and global variables. The *self* allows every function inside the class to access the variables inside the *__init__()*.
 
 Variables that are accesible through instances like this are called **attributes**.
+
+## Making an Instance from a Class
+
+The best explanation I have ever read about this is, "think of a class a set of instructions for how to make an instance".
+
+For example, the class *Dog* is just a set of instructions about how to make individual instances(copy) representing specific dogs.
+
+~~~python
+class Dog:
+  # Here you defined the information and behavior of the dog
+  
+my_dog = Dog('Willie', 6) # You create one instance of the Dog class, called my_dog 
+
+print(f"My dog's name is {my_dog.name}.") # This will use the values defined for my_dog as arguments for the parameters of the methods defined inside the class Dog
+print(f"My dog is {my_dog.age} years old.") # Same here
+my_dog.sit() # Calls the sit() method for the new instance of Dog
+my_dog.roll_over() # Calls the roll_over() method for the new instance of Dog
+
+# It prints:
+'''
+My dog's is Maxy
+It's 5
+Maxy is now sitting
+Maxy is rolling over!!
+'''
+~~~
 
