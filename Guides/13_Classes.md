@@ -62,10 +62,17 @@ my_dog.roll_over() # Calls the roll_over() method for the new instance of Dog
 
 # It prints:
 '''
-My dog's is Maxy
+My dog's name is Maxy
 It's 5
 Maxy is now sitting
 Maxy is rolling over!!
 '''
 ~~~
 
+### Accessing the Attributes
+
+As you saw in the previous example, when you want to access to the attributes (information) in a class you use the dot notation, like **my_dog.name**. This then refers to the attribute named **self.name = name** in the *__init__()* function.
+
+### Calling Methods
+
+Like we said before, you use the dot notation but now you refer to the method you want to call, for example **my_dog.sit()** will call the method *sit()* and will pass the arguments given to *my_dog* in order to execute the method. The same for *roll_over()*.
