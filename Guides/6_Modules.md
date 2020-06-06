@@ -63,6 +63,8 @@ def make_pizza(size, toppings): # The funtions has two parameters for size and t
 
 Now we save the file in the same directory of our the program we are creating that needs the *pizza.py* module.
 
+#### NOTE: Modules' names can't start with a number. It might cause an error.
+
 #### 2 - Using A Module:
 
 Just like with Python's own modules, we just simply import the module.
