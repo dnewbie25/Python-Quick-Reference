@@ -38,7 +38,9 @@ grid[6][0] = '0'
 grid[7][0] = '.'
 grid[8][0] = '.'
 
-At every vertical it will take the index 0 of that list, and will print it horizontally as a string
+At every vertical it will take the index 0 of that list, and will print it horizontally as a string:
+
+Like this: ..OO.OO..
 
 '''
   
