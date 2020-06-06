@@ -31,15 +31,15 @@ class Dog: # 1
 
 You see that there are some numbers after each statement. I'll explain what's happening there:
 
-**1 - ** The class *Dog* is created. As convention every class name should be capitalized.
+**1-** The class *Dog* is created. As convention every class name should be capitalized.
 
-**2 - ** A function that's part of a class is called a *method*...actually function and name are the same, but it's better to point that because some programmers are very strict regarding the names they use, so keep this in mind.
+**2-** A function that's part of a class is called a *method*...actually function and name are the same, but it's better to point that because some programmers are very strict regarding the names they use, so keep this in mind.
 
 The *__init__()* is a special method that Python runs automatically every time we create an instance (copy) of the Dog class. You need to use **two underscores at the beginning and at the end of the method to make Python run it automatically**.
 
 **Parameters inside __init__()**: This method has a special parameter, **self**. This one gives access to the instance to every function in the class it is calling. When we cant to use the Dog class we will pass only name and age because *self* will run automatically.
 
-**3 - ** We create a method sit() with the parameter *self*. This way the sit method will have access to a variable that was defined in the function *__init__*. Remember there are local and global variables. The *self* allows every function inside the class to access the variables inside the *__init__()*.
+**3-** We create a method sit() with the parameter *self*. This way the sit method will have access to a variable that was defined in the function *__init__*. Remember there are local and global variables. The *self* allows every function inside the class to access the variables inside the *__init__()*.
 
 Variables that are accesible through instances like this are called **attributes**.
 
