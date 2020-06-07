@@ -99,4 +99,4 @@ The only thing you need to differ from each instance is the instance's name, *my
 
 One of the thins you want is to modify the attributes in eery instance you create, because even when you are working with the blueprints of a car like a Mazda 3, you still want to change the color, the number of seats, the speed and the size of the trunk.
 
-This part would take a lot to write, so I decided to create a code example with comments so you can see what's happening. Just go to [Classes And Instances]()
+This part would take a lot to write, so I decided to create a code example with comments so you can see what's happening. Just go to [Classes And Instances](Example Exercises/Basic Exercises/22_Classes _And_Instances.py)
