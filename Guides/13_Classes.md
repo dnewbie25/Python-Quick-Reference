@@ -94,3 +94,7 @@ print(f"Your dog's name is {your_dog.name}") # Prints 'Your dog's name is Puffy"
 You can do the above with methods and any other attribute your class has. Even if you use the same name and age for both dogs Python will read them as two separate instances. It's like two people with the same breed of dog and the same name for them, but you know they are not the same dog.
 
 The only thing you need to differ from each instance is the instance's name, *my_dog* or *your_dog* but you can't name them the same, otherwise you will be redefining it and having just one only instance.
+
+## Working With Classes And Instances
+
+One of the thins you want is to modify the attributes in eery instance you create, because even when you are working with the blueprints of a car like a Mazda 3, you still want to change the color, the number of seats, the speed and the size of the trunk.
