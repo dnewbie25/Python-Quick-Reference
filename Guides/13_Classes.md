@@ -8,7 +8,7 @@ You can specify information for every instance and a set of actions every instan
 
 ## Creating and Using a Class
 
-The basic example you will definitely find in almost every programming book is the *Dog* class. You can create a class to represent a dog in real life. As any dog, you have to specify its race, name and age as well as its behavior, sit, roll over, bark, greets.
+The basic example you will definitely find in almost every programming book is the *Dog* class. You can create a class to represent a dog in real life. As any dog, you have to specify its breed, name and age as well as its behavior, sit, roll over, bark, greets.
 
 In this example we will create a dog with two pieces of information and two behaviors:
 
@@ -76,3 +76,21 @@ As you saw in the previous example, when you want to access to the attributes (i
 ### Calling Methods
 
 Like we said before, you use the dot notation but now you refer to the method you want to call, for example **my_dog.sit()** will call the method *sit()* and will pass the arguments given to *my_dog* in order to execute the method. The same for *roll_over()*.
+
+## Creating Multiple Instances
+
+With the same *Dog* class, let's create multiple instance for dogs (objects or copies with their own attributes but same methods).
+
+~~~python
+# Imagine the class was defined here. This in order to simplyfy the amount of text I have to type
+
+my_dog = Dog('Titan', 5)
+your_dog = Dog('Puffy', 2)
+
+print(f"My dog's name is {my_dog.name}") # Prints 'My dog's name is Titan"
+print(f"Your dog's name is {your_dog.name}") # Prints 'Your dog's name is Puffy"
+~~~
+
+You can do the above with methods and any other attribute your class has. Even if you use the same name and age for both dogs Python will read them as two separate instances. It's like two people with the same breed of dog and the same name for them, but you know they are not the same dog.
+
+The only thing you need to differ from each instance is the instance's name, *my_dog* or *your_dog* but you can't name them the same, otherwise you will be redefining it and having just one only instance.
