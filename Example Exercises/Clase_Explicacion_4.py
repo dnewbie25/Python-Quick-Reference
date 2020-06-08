@@ -75,9 +75,12 @@ print(mi_furgoneta.carga(True))
 Aunque estos arrancan, frenan y aceleran, poseen ciertas características que los vuelven una clase aparte:
 '''
 
-class V_Electricos(): # Como ven esta no hereda nada. Es una clase independiente
+class V_Electricos(Vehiculos): # Como ven esta no hereda nada. Es una clase independiente
   # Los eléctricos sabemos que no usan gasolina entonces debemos inicializar un constructor
-  def __init__(self):
+  def __init__(self, marca, modelo):
+
+    super().__init__(marca, modelo) # De esta forma puede recibir los argumentos de la clase Vehiculos
+
     self.autonomia = 100 # Batería da 100 Km de recorrido
 
   #Debemos conocer la carga de la batería
@@ -93,6 +96,16 @@ Esto se llama Herencia Múltiple:
 class Bici_Electrica(V_Electricos, Vehiculos): # Le decimos que hereda de dos clases todos los métodos y atributos
   pass # Por ahora estará vacio
 
-mi_bici = Bici_Electrica() 
+mi_bici = Bici_Electrica('Canondale', 'GTX125') 
 '''Como hereda de dos, hay dos constructores. En este caso se da preferencia a la primera clase que indica entre los paréntesis de Bici_Electrica, en este caso usará el constructor de V_Electricos, que en este caso no tiene argumentos'''
+
+'''funciones super() y isinstance()'''
+
+# Si quisiéramos usar el constructor de Vehiculos en las bicicletas podríamos o crear los parámetros en Bici_Electrica, que no es lo ideal o usar un método:
+
+'''super() --> El cual sirve para llamar al constructor de la clase Padre'''
+
+#Ahora sí ya se usó super( ) en las bicicletas
+mi_bici.estado()
+
 
