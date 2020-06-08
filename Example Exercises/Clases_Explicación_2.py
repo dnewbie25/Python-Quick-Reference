@@ -13,7 +13,7 @@ class Coche:
     self.__en_marcha = arrancamos
 
     if self.__en_marcha == True: # Si se enciende el auto se debe ejecutar el chequeo
-      chequeo = self.chequeo_interno() # Se usa la función chequeo_interno()
+      chequeo = self.__chequeo_interno() # Se usa la función chequeo_interno()
     
     if self.__en_marcha == True and chequeo == True: # Si ya está encendido pues no puede volver a encenderse. Además si está encendido y el chequeo está True el auto está en movimiento
       return 'El coche está en marcha'
@@ -26,7 +26,7 @@ class Coche:
     estado_coche = f"El coche tiene {self.__ruedas}. Tiene un largo de {self.__largo_chasis} cm y un ancho de {self.__ancho_chasis} cm"
     return estado_coche
 
-  def chequeo_interno(self): # Como los autos reales, al encenderlo indica si tiene gasolina, aceite, puertas cerradas y eso
+  def __chequeo_interno(self): # Como los autos reales, al encenderlo indica si tiene gasolina, aceite, puertas cerradas y eso
 
     # El chequeo debería hacerse apenas se enciende el auto, por lo tanto debería ejecutarse chequeo_interno() en el método arrancar()
     print("Realizando chequeo interno")
@@ -45,9 +45,11 @@ print("\n\n------------Primer coche----------\n\n")
 mi_coche = Coche()
 
 print(mi_coche.arrancar(True)) # Se dice que arranque
-
+print(mi_coche.__chequeo_interno())
 print("\n\n------------Segundo coche----------\n\n")
 
 mi_coche_2 = Coche()
 
 print(mi_coche_2.arrancar(False))
+#print(mi_coche_2.__chequeo_interno()) 
+''' Este método se puede acceder por fuera, incluso si el auto está apagado y eso no tiene sentido. Debemos encapsularlo, ahora con los dos __ no se puede acceder a él'''
