@@ -71,7 +71,7 @@ class Vehiculos:
 class Moto(Vehiculos): # Se pone como argumento el nombre de la clase que queremos que herede
   pass # Para que Python entiendo que no vamos a agregar nada por ahora, pero que no envíe un error
 
-mi_moto = Moto('Kawazaki', 'Hayabusa')
+mi_moto = Moto('Kawazaki', 'Hayabusa')# Tendría todos los métodos y atributos de la clase Vehiculos
 
 mi_moto.estado() # Saldría con todo False
 
@@ -79,4 +79,17 @@ mi_moto.aceleracion()
 mi_moto.arrancar()
 
 mi_moto.estado() # Ahora está en marcha y acelerando
+
+
+'''*************
+
+Herencia simple y Herencia múltiple
+
+
+****************
+
+'''
+
+
+
 
