@@ -64,7 +64,21 @@ class User:
 class Admin(User): #Inherits from User
   def __init__(self, first_name, last_name, email, phone, city):
     super().__init__(first_name, last_name, email, phone, city) # Will use the attributes of the User class
-    self.privileges = ["can add post", "can delete post", "can ban users"] # There are 3 types of privileges
+    #self.privileges = ["can add post", "can delete post", "can ban users"] # There are 3 types of privileges. This is now in class Privilege
+    self.privileges = Privilege()
+  
+
+'''my_user = Admin('Danielle', 'Singh', 'dsignh78@hotmail.com', '3254112', 'Dubai')
+my_user.describe_user()
+my_user.privileges.show_privileges()
+''' # This won't work because Privilege was defined after creating my_user. You can't call methods of classes declared after creating the instance
+
+
+print("\n\n---------------------------Privilege Exercise-------------------\n\n")
+
+class Privilege: # This class will be used as an attribute for Admin class
+  def __init__(self, privileges = ["can add post", "can delete post", "can ban users"]): # Initialize the attribute for Privilege
+    self.privileges = privileges
 
   def show_privileges(self):
     my_user_is = input("Choose standard or admin: ")
@@ -75,7 +89,6 @@ class Admin(User): #Inherits from User
     else:
       print(f"The type of user '{my_user_is.lower()}' does not exist")
 
-my_user = Admin('Danielle', 'Singh', 'dsignh78@hotmail.com', '3254112', 'Dubai')
-my_user.describe_user()
-my_user.show_privileges()
-
+my_user_2 = Admin('Matthew', 'Carlk', 'math34@hotmail.com', '325441', 'Bogota')
+my_user_2.describe_user()
+my_user_2.privileges.show_privileges()
