@@ -29,10 +29,13 @@ class IceCreamStand(Restaurant):
     super().__init__(stand_name, type_iceCream) # We initialize with the parameters of Restaurant, a name and a kind of cuisine, in this case name of the stand and type of ice cream
 
   def flavors(self, stand_flavors = []):
-    for i in range(5):
+    loop = 0
+    
+    while loop < 5:
       print("Enter a flavor: ")
       flavor = input()
       stand_flavors.append(flavor)
+      loop += 1
 
     print("\nMy Ice Cream stand has these flavors:")
     for items in stand_flavors:
