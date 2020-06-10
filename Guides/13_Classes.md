@@ -102,3 +102,5 @@ One of the thins you want is to modify the attributes in eery instance you creat
 This part would take a lot to write, so I decided to create a code example with comments so you can see what's happening. Just go to [Classes And Instances](https://github.com/dnewbie25/Python-Quick-Reference/blob/master/Example%20Exercises/Basic%20Exercises/22_Classes%20_And_Instances.py).
 
 In the previous link you will see how to set a default value for an attribute, how to modify the attribute by using methods, a reset method or just be redefining the attribute in each instance.
+
+## Inheritance
