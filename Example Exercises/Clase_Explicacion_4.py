@@ -35,7 +35,7 @@ class Moto(Vehiculos): # Se pone como argumento el nombre de la clase que querem
     
     '''Debemos crear un método estado() sólo para la clase Moto'''
 
-  def estado(self): # Así se llame igual, el hecho de declararlo en la clase Moto hace que se use este en lugar del estado() en la clase Vehiculos
+  def estado(self): # Overriding = Así se llame igual, el hecho de declararlo en la clase Moto hace que se use este en lugar del estado() en la clase Vehiculos
     print(f"\nMarca: {self.marca} - Modelo {self.modelo}")
     print(f"En Marcha: {self.enmarcha} - Acelerando: {self.acelerar} - Frenando: {self.frenar}\n{self.hacer_caballito}")
 
