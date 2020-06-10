@@ -179,7 +179,7 @@ You can add as many methods and attributes as you want, but if you find that an 
 
 In Python if you have a method in the parent class but don't want to use it exactly like it was declared, you can override it by redeclaring it inside the instance you are creating and changing its attributes or functions inside. Python will disregard the method from the Car class and will use the method declared inside the child class. For example, if we want to change *get_descriptive_name( )* just for Electric_Car we redeclare it:
 
-~~~~python
+~~~python
 class Electric_Car(Car):
   def __init__(self, make, model, year):
     super().__init__(make, model, year) # We initialize the attributes from the parent class
