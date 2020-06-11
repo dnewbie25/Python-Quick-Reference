@@ -61,3 +61,21 @@ with open('pi_digits') as filename:
  8979323846
  2643383279'''
 ~~~
+
+## Making A List Of Lines
+
+With the **with** instruction you can only work with files inside the code block. If you want to work with the lines of a file somewhere else in your code that's outside the **with** block you can store them in a list:
+
+Let's say we are saving the *.txt* file the same way, the pi digits split among three lines.
+
+~~~python
+filename = 'pi_digits.txt' # We store the file in a variable...yup, variable can contain complete documents.
+
+with open(filename) as file_object: # We create a file_object Alias to refer to 'filename'
+  lines = file_object.readlines() # readlines() stores the file lines in a list...do not confuse with readline()
+  
+for line in lines:
+  print(line.rstrip()) # Prints each line stored in the list
+~~~
+
+Our code has a **readlines( )** method. This one stores each line as an element in a list, ['3.1415926535\n', ' 8979323846\n', ' 2643383279'] with a *\n* escape character at the end. Now, do not think it's the same as **readline( )**, one is plural and the other is singular. This last one **reads only the first line of the file**.
