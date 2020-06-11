@@ -23,5 +23,6 @@ with open(filename) as new_file_object:
   lines = new_file_object.readline()
 
 print(lines)
+
 for line in lines:
   print(line.rstrip())
