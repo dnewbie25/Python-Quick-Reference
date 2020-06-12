@@ -81,3 +81,5 @@ for line in lines:
 Our code has a **readlines( )** method. This one stores each line as an element in a list, ['3.1415926535\n', ' 8979323846\n', ' 2643383279'] with a *\n* escape character at the end. Now, do not think it's the same as **readline( )**, one is plural and the other is singular. This last one **reads only the first line of the file**.
 
 ## Working With A File's Contents
+
+Once you read a file you can do a lot of different stuff with it. Let's try to print the pi digits in one line without using any special method, just a loop.
