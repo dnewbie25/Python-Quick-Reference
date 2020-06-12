@@ -1,0 +1,4 @@
+ In Python you can...Until now I've learned a lot about what Pythons is and its capabilities. I would like to dig deeper in order to become a Machine Learning expert.
+
+ In Python you can...For now as a beginner I would like to automate some simple tasks and start building simple applications in order to grasp all the fundamentals of programming and Python.
+
