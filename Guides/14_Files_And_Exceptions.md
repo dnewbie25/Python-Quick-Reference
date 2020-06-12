@@ -83,3 +83,9 @@ Our code has a **readlines( )** method. This one stores each line as an element 
 ## Working With A File's Contents
 
 Once you read a file you can do a lot of different stuff with it. Let's try to print the pi digits in one line without using any special method, just a loop.
+
+There are a lot of way to work with external files. You can read the code directly here so you can figure out what's happening. Reading other people's code is a must in order to learn programming.
+
+- [Reading Files Basics](https://github.com/dnewbie25/Python-Quick-Reference/blob/master/Example%20Exercises/Basic%20Exercises/26_Reading_Files.py)
+
+- [Reading Files Exercises](https://github.com/dnewbie25/Python-Quick-Reference/blob/master/Example%20Exercises/Basic%20Exercises/27_Reading_Files_Exercises.py)
