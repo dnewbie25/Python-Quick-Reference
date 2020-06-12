@@ -175,7 +175,7 @@ print(s.endswith('d'))
 print(s.split())
 
 # Find position
-print(s.find('r'))
+print(s.find('r')) or print(s.index('r'))
 
 # Is all alphanumeric
 print(s.isalnum())
