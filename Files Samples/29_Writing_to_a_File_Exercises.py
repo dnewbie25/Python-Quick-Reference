@@ -25,7 +25,7 @@ with open(filename, 'w') as file_object:
 
 # Guests Book
 
-filename_2 = 'Files Samples/guests_book.py'
+filename_2 = 'Files Samples/guests_book.txt'
 
 loop_2 = 0
 day = 0
