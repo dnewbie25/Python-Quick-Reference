@@ -46,3 +46,46 @@ What took us 17 lines of code for the US standard format can be simplified in ju
 
 \d{3}-\d{3}-\d{4} # This will search for 3 digits, hyphen, three digits, hyphen and four digits
 ~~~
+
+## Creating RegEx Objects
+
+Everytime you want to use the regular expressions in Python you need to importa the **re** module:
+~~~python
+import re # Imports the RegEx module
+~~~
+
+To use it you need a variable that's equal to the pattern you want to match. In this case we use **r.compile( )**:
+~~~python
+import re
+
+phone_number_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # This returns a RegEx Object contained in the phone_number_regex variable
+~~~
+
+## Matching RegEx Objects
+
+The **search( )** method of the **re** module will search for any match of the regex object you created:
+~~~python
+import re
+
+phone_number_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+match_test = phone_number_regex.search('My number is 415-555-4242.')
+
+print(f"Phone number found: {match_test.group()}") # Prints 'Phone number found: 415-555-4242'. I'll explain the group() below
+~~~
+
+As you see, we match the phone number, but in our print statement we use a **group( )** method. This because if you don't use that method you will get this:
+~~~python
+print(f"Phone number found: {match_test}") # Prints 'Phone number found: <re.Match object; span=(13, 25), match='415-555-4242'>'
+
+print(f"Phone number found: {match_test.group()}") # Prints 'Phone number found: 415-555-4242'
+~~~
+
+The group( ) method makes sure just the string we try to match gets displayed, otherwise it will tell you the index of the characters and the pattern it is trying to match.
+
+Basically the order to use a RegEx is:
+1- Import *re* module.
+2- Create a regex object with *re.compile( )* specifying the pattern you want to search.
+3- Use *search( )* to pass a string you want to look up for the pattern you need.
+4- Call the match object with *group( )* to display the pattern found.
+
+## More Pattern Matching with RegEx
