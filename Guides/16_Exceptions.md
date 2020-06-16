@@ -77,7 +77,7 @@ while True:
     print(answer) # If the try was successful it continues to this block and prints the answer
 ~~~
 
-Note that we have an **else** statement too, but here it works different from **if-else**. When you use an **else** in exception handling you are telling Python that once the code in the *try* block executes, if no error occurs, then continue with the code inside the *else* statement.
+Note that we have an **else** statement too, but here it works different from **if-else**. When you use an **else** in exception handling you are telling Python that once the code in the *try* block executes, if no error occurs, then continue with the code inside the *else* statement. It isn't so required with modern Python versions but it can be helpful.
 
 ### FileNotFound Exception
 
