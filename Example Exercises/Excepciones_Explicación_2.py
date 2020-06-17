@@ -6,7 +6,8 @@ def divide():
 
     print("La división es " + str(num1 / num2))
 
-  '''Los except se pueden declarar consecutivamente en caso de que puedan ocurrir muchos errores, como aquí donde puede dar error si se ingresan letras en vez de números o si se ingresa cero como denominador'''
+# Los except se pueden declarar consecutivamente en caso de que puedan ocurrir muchos errores, como aquí donde puede dar error si se ingresan letras en vez de números o si se ingresa cero como denominador
+
 
   except ValueError: # Si no es un número
 
@@ -14,14 +15,12 @@ def divide():
 
   except ZeroDivisionError: # Si el denominador es cero
     print("No se puede dividir entre cero")
+    
 
-  '''
-  También se puede poner except solito para que capture todas las excepciones, pero no ayuda al usuario a saber qué pasó pues no le darías ningún mensaje específico
+#También se puede poner except solito para que capture todas las excepciones, pero no ayuda al #usuario a saber qué pasó pues no le darías ningún mensaje específico
 
-  except:
-    print("El valor es incorrecto o el denominador es cero")
-
-  '''
+ # except:
+  #  print("El valor es incorrecto o el denominador es cero")
 
   print("Cálculo finalizado")
 
