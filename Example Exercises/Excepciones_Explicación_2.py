@@ -21,7 +21,11 @@ def divide():
 
  # except:
   #  print("El valor es incorrecto o el denominador es cero")
+  finally:
+    print("Cálculo finalizado")
 
-  print("Cálculo finalizado")
+  # Si quisiéramos un código que se ejecute siempre sin importar si falla o no, podríamos usar el finally o dejar sólo el print
+
+  
 
 divide()
