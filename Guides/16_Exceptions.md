@@ -108,3 +108,6 @@ try: # If no error arises the program will execute
 except FileNotFound: # Otherwise it will print this message
   print(f"The file is not in the directoy. Please check and change the folder")  
 ~~~
+
+## Analyzing Text
+
