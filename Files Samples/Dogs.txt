@@ -4,3 +4,6 @@ dogs3
 a
 b
 c
+pin1
+pin2
+pin3

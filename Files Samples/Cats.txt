@@ -4,3 +4,6 @@ cats3
 a
 b
 c
+lin1
+lin2
+lin3

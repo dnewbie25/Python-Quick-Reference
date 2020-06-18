@@ -42,14 +42,13 @@ while True:
 print("\n\n-----------------------Cats And Dogs------------------\n\n")
 
 filenames = ['Files Samples/Cats.txt', 'Files Samples/Merma-*-ids.txt','Files Samples/Dogs.txt']
-see_this = 'Files Samples/Merma-*-ids.txt'
 
 for items in filenames:
 
   try:
 
-    for i in range(3):
-      with open(items, 'a') as f:
+    with open(items, 'a') as f:
+      for i in range(3):
         content = input("Enter the name of your pet: - ")
         f.write(content + "\n")
   except OSError:
