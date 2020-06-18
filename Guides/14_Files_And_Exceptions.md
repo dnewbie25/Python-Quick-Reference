@@ -180,3 +180,9 @@ except FileNotFoundError: # If the file doesn't exist then you will create a use
 else: # If the try was successful and the file exists it will print this message
   print(f"Welcome back, {username}!!")
 ~~~
+
+## Refactoring
+
+This is what programmers talk about when they say "break up a big problem into pieces and solve each mini problem". This approach will make you solve almost all of the problems you'll encounter while programming.
+
+You might be thinking about how to actually use refactoring. It's really easy, **just create functions that solve one and only one task. Each function should either return the expected output or *None***. Thus, if a program needs maintenance you can just modify a small block of code, not all of your lines.
