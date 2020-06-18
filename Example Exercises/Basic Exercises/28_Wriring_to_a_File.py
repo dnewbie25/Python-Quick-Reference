@@ -22,7 +22,7 @@ with open(filename2, 'w') as file_object_2:
   file_object_2.write("And this is my second one jeje")
   
 
-print("\n\n----------Appending to a File-----------\n\n") # If you want to add content onstead of erasing and writing over the existing file
+print("\n\n----------Appending to a File-----------\n\n") # If you want to add content instead of erasing and writing over the existing file
 
 
 filename3 = 'Files Samples/multiple_lines.txt' # This file already exists
