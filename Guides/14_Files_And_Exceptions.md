@@ -89,3 +89,94 @@ There are a lot of way to work with external files. You can read the code direct
 - [Reading Files Basics](https://github.com/dnewbie25/Python-Quick-Reference/blob/master/Example%20Exercises/Basic%20Exercises/26_Reading_Files.py)
 
 - [Reading Files Exercises](https://github.com/dnewbie25/Python-Quick-Reference/blob/master/Example%20Exercises/Basic%20Exercises/27_Reading_Files_Exercises.py)
+
+## Storing Data
+
+To store data you can just se the **JSON module**. Thi format was created initially for Javascript but it has become a standard in the industry since then, even for Python and other bunch of programming languages.
+
+As every other module, you need to import it before using it:
+
+~~~python
+import json
+~~~
+
+Once you import it you can start using its functions.
+
+### json.dump( )
+
+This function is used to store information in a data structure (lists, tuples, dictionaries). It needs two arguments, first it needs the piece of data it will store and second the file object where you want to store that data:
+
+~~~python
+import json
+
+numbers = [1,2,3,4,5,6,7]
+
+filename = 'numbers.json' # You create a file .json
+
+with open(filename, 'w') as file_object: # Open the file in write mode
+  json.dump(numbers, file_object) # Call the json.dump() and pass the list because you want to save it and the file_object, which is the alias for the filename
+  
+# Now the numbers list should be stored in the json file if you open it
+~~~
+
+### json.load( )
+
+If we want to read the data we store in a json file we can simply use this function as follows:
+
+~~~python
+import json
+
+filename = 'numbers.json'
+
+with open(filename) as file_to_read: # This one reads the file
+  numbers_to_display = json.load(file_to_read) # Loads the data into the numbers_to_display
+  
+print(numbers_to_display) # Displays the loaded data
+~~~
+
+## Saving And Using User-Generated Data
+
+When you use a program you want to store information on it, whther it's your data of the user's data. JSON files are very useful here:
+
+~~~python
+import json
+
+username = input("Enter you user name: ")
+
+filename = 'usernames.json'
+
+with open(filename, 'w') as f:
+  json.dump(username, f)
+  print(f"We'll remember when you come back, {username}")
+~~~
+
+If you want to read the user name just use the same **json.load( )** function we use previously.
+
+~~~python
+import json
+
+filename = 'usernames.json'
+
+with open(filename) as f:
+  username = json.load(f)
+  print(f"Hello, {username}, how are you?")
+~~~
+
+Now, as in real-world programs you need to store and load data in the same program. You don't want to open individual files every time you need to load some data. You don't want unexpected crashes because the username was not found so we'll rely on some not so old friends, **try-except**.
+
+~~~python
+import json
+
+filename = 'usernames.json'
+
+try:
+  with open(filename) as f: # You will try to read the file first. If it is not possible then you'll create a new entry for that file
+    username = json.load(f)
+except FileNotFoundError: # If the file doesn't exist then you will create a username
+  username = input("What is your username?: ")
+  with open(filename, 'w') as f:
+    json.dump(username, f)
+    print(f"We'll remember your username: {username}")
+else: # If the try was successful and the file exists it will print this message
+  print(f"Welcome back, {username}!!")
+~~~
