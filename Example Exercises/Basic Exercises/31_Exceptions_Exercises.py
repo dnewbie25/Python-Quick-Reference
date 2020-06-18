@@ -43,16 +43,22 @@ print("\n\n-----------------------Cats And Dogs------------------\n\n")
 
 filenames = ['Files Samples/Cats.txt', 'Files Samples/Merma-*-ids.txt','Files Samples/Dogs.txt']
 
-for items in filenames:
+for items in filenames: # Loops through all the items in the list (3 files)
 
-  try:
+  try: # Try to open the file and write 3 different names for the pets
 
     with open(items, 'a') as f:
       for i in range(3):
         content = input("Enter the name of your pet: - ")
         f.write(content + "\n")
-  except OSError:
+
+  except FileNotFoundError:
     print(f"{items} does not exist")
+
+  except OSError: # If the file does not exists it will send this error. OSError is the parent class of FileNotFoundError. It arises sometimes instead of FileNotFound when using lists. You can't put OSError before FileNotFoundError. You need to go from the specific to the general
+    print(f"{items} does not exist")
+
+  
 
 
 

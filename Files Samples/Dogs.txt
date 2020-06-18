@@ -7,3 +7,6 @@ c
 pin1
 pin2
 pin3
+a
+a
+a

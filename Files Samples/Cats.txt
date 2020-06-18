@@ -7,3 +7,6 @@ c
 lin1
 lin2
 lin3
+q
+q
+q
