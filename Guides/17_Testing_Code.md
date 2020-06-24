@@ -66,3 +66,20 @@ class NameTestCase(unittest.TestCase): # We create a class NameTestCase that inh
 if __name__ == '__main__': # This is somewhat hard to understand at first, but the easy definition: If you use this the unittest will execute just the functions you want to get executed. In larger programs this is helpful because when importing modules you might have some functions executing without you calling them
   unittest.main()
 ~~~
+
+All of the above will output:
+
+~~~python
+.
+
+-----------------------------------------------------
+
+Ran 1 test in 0.000s
+OK 
+~~~
+
+That means that the program returned the expected output (the one at *self.assertEqual*) and it's OK.
+
+#### Failing Test
+
+Now, when you use the *unittest* module it'll become really common to get errors, because you create it to find errors that you'll certainly have. Let's see how an error is displayed.
