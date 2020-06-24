@@ -161,3 +161,47 @@ OK
 
 The test for first and last name as well as the test for first, middle, last name ran without problems. 
 
+# Testing A Class
+
+Previously we tested functions. Now we must go on and start testing classes. You saw the **assertEqual( )** method which evaluates whether an argument is equal to the expected output. There are a lot for assert methods but the main ones are:
+
+**assertEqual(a, b)** evaluates if a == b
+
+**assertNotEqual(a, b)** evaluates if a != b
+
+**assertTrue(x)** evaluates if x is True
+
+**assertFalse(x)** evaluates if x is False
+
+**assertIn(item, list)** evaluates if item is in list
+
+**assertNotIn(item, list)** evaluates if item it not in list
+
+## A Class to Test
+
+Much of this involves just testing the methods inside the class but there are some minor differences that we need to cover. Let's create a simple class:
+
+~~~python
+class AnonymousSurvey:
+
+  """Collects anonymous answers to survey questions"""
+  
+  def __init__(self, question, responses):
+    """Store a question and prepares to store answers"""
+    self.question = question
+    self.responses = []
+    
+  def show_questions(self):
+    """show the survey questions"""
+    print(self.question)
+    
+  def store_response(self, new_response):
+    """store a single response to a survey"""
+    self.responses.append(new_response)
+    
+  def show_results(self):
+     """Show all the responses given"""
+     print("Survey results")
+     for response in self.responses:
+        print(f"- response")  
+~~~
