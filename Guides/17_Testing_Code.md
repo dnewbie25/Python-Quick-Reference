@@ -48,7 +48,7 @@ while True:
   print("\tThe formatted name is: {formatted_name}") # If you enter 'daVid flYncH', it will print 'David Flynch'
 ~~~
 
-**Now the tricky part, the unittest block of code***
+**Now the tricky part, the unittest block of code**
 
 We want to test the previous *name_function.py* module so:
 
