@@ -80,6 +80,84 @@ OK
 
 That means that the program returned the expected output (the one at *self.assertEqual*) and it's OK.
 
-#### Failing Test
+## Failing Test
 
 Now, when you use the *unittest* module it'll become really common to get errors, because you create it to find errors that you'll certainly have. Let's see how an error is displayed.
+
+Let's say we want to add the second version that adds a middle name only if the person has one.
+
+We can modify the *name_function.py*:
+
+~~~python
+def get_formatted_name(first, middle, last):
+  fullname = f"{first} {middle} {last}"
+  return fullname.title()
+~~~
+
+If we apply the test case for this code it will print:
+
+~~~python
+E # Means Error
+======================================================================
+ERROR: test_first_last_name (__main__.NamesTestCase) # Tells us what test case failed so we can review that specific code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+ File "test_name_function.py", line 8, in test_first_last_name
+ formatted_name = get_formatted_name('janis', 'joplin')
+TypeError: get_formatted_name() missing 1 required positional argument: 'last' # We entered two arguments, it was expecting 3
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+FAILED (errors=1) # How many test cases failed
+~~~
+
+## Responding To A Failed Test
+
+If you have the test case syntax correctly, you will see an error only if the functions it's evaluating failed. **DO NOT TRY TO CHANGE THE TEST CASE TO MAKE IT SAY THE FUNCTION IS OK**. If a test case failed it means you need to change the function it is evaluating, not to change the test case.
+
+In the previous code, there were 3 mandatory parameters, but remember that not everone has a middle name so this parameter should be optional.To do this just move **middle** to the end of the parameters and make it equal to an empty string.
+
+~~~python
+def get_formatted_name(first, last, middle = ''):
+  if middle: # If middle has something. middle == True won't work because it will evaluate strictly
+    fullname = f"{first} {middle} {last}"
+  else: # If it's False. An empty string is a Falsy value
+    fullname = f"{first} {last}"
+    
+  return fullname.title()
+~~~
+
+Now the test case will print **OK**.
+
+## Adding New Tests
+
+Now, we have a test case for first and last name, but we also want a test case for people with middle names. Let's create another one:
+
+~~~python
+import unittest
+from name_function import get_formatted name
+
+# The first part is the same we already had
+class NameTestCase(unittest.TestCase):
+  def test_first_last_name(self):
+    fullname = get_formmated_name()
+    self.assertEqual(fullname, 'David Flynch')
+    
+  def test_first_middle_last(self):
+    formatted_name = get_formatted_name('David', 'Flynch', 'Theodore')
+    self.assertEqual(formatted_name, 'David Theodore Flynch')
+    
+ if __name__ == '__main__':
+  unittest.main()
+~~~
+
+The above will print:
+
+~~~python
+..
+----------------------------
+Ran 2 tests in 0.001s
+OK
+~~~
+
+The test for first and last name as well as the test for first, middle, last name ran without problems. 
+
