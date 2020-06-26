@@ -203,5 +203,5 @@ class AnonymousSurvey:
      """Show all the responses given"""
      print("Survey results")
      for response in self.responses:
-        print(f"- response")  
+        print(f"- {response}")  
 ~~~
