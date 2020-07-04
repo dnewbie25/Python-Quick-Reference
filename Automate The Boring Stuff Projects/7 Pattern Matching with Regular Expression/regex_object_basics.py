@@ -78,6 +78,8 @@ print("\n\n--------------Optional Matching with ? Question Mark-----------------
 
 # If you want to make a match optional just use (match_text)?
 
+# The question mark matches zero or only one set of characters, no more
+
 bat_optional_regex = re.compile(r'Bat(wo)?man') # the 'wo' is now optional
 
 test_optional = bat_optional_regex.search('The Adventures of Batwoman')
@@ -85,3 +87,18 @@ test_optional = bat_optional_regex.search('The Adventures of Batwoman')
 print(test_optional.group())
 
 print("\n\n--------------Matching Zero or More with the Star *    -----------------\n\n")
+
+# Opposite to the ? this matches zero or more set of characters
+
+bat_optional_regex_star = re.compile(r'Bat(wo)*man')
+mo1 = bat_optional_regex_star.search('The Adventures of Batman')
+
+print(mo1.group())
+
+mo2 = bat_optional_regex_star.search('The Aventures of Batwoman')
+
+print(mo2.group())
+
+mo3 = bat_optional_regex_star.search('The Advetures of Batwowowowowoman') # Matches all the 'wo'. The ? would match just the first one
+
+print(mo3.group())
