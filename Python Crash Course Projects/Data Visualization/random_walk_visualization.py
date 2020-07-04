@@ -15,6 +15,7 @@ rw.fill_walk()
 plt.style.use('classic') # classic style
 fig, ax = plt.subplots() # creates a figure contaiing a single axes
 
+ax.plot(rw.x_value, rw.y_value)
 ax.scatter(rw.x_value, rw.y_value, c = rw.y_value,cmap= plt.cm.BrBG, s = 15) # put points in the rw x and y values
 
 plt.show()

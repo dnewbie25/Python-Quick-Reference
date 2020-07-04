@@ -75,3 +75,13 @@ print(batmobile.group(1)) # Prints 'mobile'
 
 #######################################################################################
 print("\n\n--------------Optional Matching with ? Question Mark-----------------\n\n")
+
+# If you want to make a match optional just use (match_text)?
+
+bat_optional_regex = re.compile(r'Bat(wo)?man') # the 'wo' is now optional
+
+test_optional = bat_optional_regex.search('The Adventures of Batwoman')
+
+print(test_optional.group())
+
+print("\n\n--------------Matching Zero or More with the Star *    -----------------\n\n")
