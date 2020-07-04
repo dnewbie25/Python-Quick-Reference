@@ -40,9 +40,9 @@ parenthesis_test = parenthesis_match.search('My phone number is (415) 555-4242')
 
 print(f"Area code: {parenthesis_test.group(1)}. Phone Number: {parenthesis_test.group(2)}") # Prints 'Area code: (415). Phone Number: 555-4242'
 
-'''If you want to detect special characters, use a \ escape character'''
+"""If you want to detect special characters, use a \\ escape character"""
 
-'''Special characters in RegEx: . ^ $ * + ? { } [] \ | ( )'''
+'''Special characters in RegEx: . ^ $ * + ? { } [] \\ | ( )'''
 #######################################################################################
 
 print("\n\n--------------Matching Multiple Groups with | Pipe character-----------------\n\n")
