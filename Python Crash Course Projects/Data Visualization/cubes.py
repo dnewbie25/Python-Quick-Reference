@@ -14,6 +14,6 @@ plt.style.use('ggplot') # assigns that style
 
 fig, ax = plt.subplots() # creates a figure containing a single axes
 
-ax.scatter(number, cubes, c = cubes, cmap = plt.cm.BrBG) # adds the data to the axes created before
+ax.scatter(number, cubes, c = cubes, cmap = plt.cm.YlOrRd, s = 7) # adds the data to the axes created before
 
 plt.show()
