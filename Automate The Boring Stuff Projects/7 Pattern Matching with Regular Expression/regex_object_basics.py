@@ -123,7 +123,7 @@ print("\n\n--------------Matching Specific Repetitions with Braces  ------------
 
 # Let's say we want to match a character repeated a specific number of times
 
-braces_match = re.compile(r'(Ha){4,5}') # This will match just the words with Ha repeated 3 to 5 times. It will stop once it finds the first match, in this case HaHaHa
+braces_match = re.compile(r'(Ha){3,5}') # This will match just the words with Ha repeated 3 to 5 times. It will stop once it finds the first match, in this case HaHaHa
 
 test_braces = braces_match.search('Ha - HaHa - HaHaHa - HaHaHaHa - HaHaHaHaHa - HaHaHaHaHaHa')
 
