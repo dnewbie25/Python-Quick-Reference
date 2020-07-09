@@ -102,3 +102,29 @@ print(mo2.group())
 mo3 = bat_optional_regex_star.search('The Advetures of Batwowowowowoman') # Matches all the 'wo'. The ? would match just the first one
 
 print(mo3.group())
+
+print("\n\n--------------Matching Zero or More with the Star +    -----------------\n\n")
+
+# The + character means match one or more. If there's zero it won't match anything
+
+plus_char = re.compile(r'Bat(wo)+man')
+test1 = plus_char.search('The Adventures of Batman')
+
+test2 = plus_char.search('The Adventures of Batwoman')
+#print(test1.group()) # Will print an Error
+
+print(test2.group())
+
+test3 = plus_char.search('The Adventures of Batwowowowowowoman')
+
+print(test3.group())
+
+print("\n\n--------------Matching Specific Repetitions with Braces  -----------------\n\n")
+
+# Let's say we want to match a character repeated a specific number of times
+
+braces_match = re.compile(r'(Ha){4,5}') # This will match just the words with Ha repeated 3 to 5 times. It will stop once it finds the first match, in this case HaHaHa
+
+test_braces = braces_match.search('Ha - HaHa - HaHaHa - HaHaHaHa - HaHaHaHaHa - HaHaHaHaHaHa')
+
+print(test_braces.group())
