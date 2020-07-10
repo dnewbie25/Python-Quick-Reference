@@ -38,6 +38,16 @@ test_consonant_class = consonantRegex.findall('RoboCop eats baby food. BABY FOOD
 
 print(test_consonant_class) # returns a list of consonants ['R', 'b', 'C', 'p', ' ', 't', 's', ' ', 'b', 'b', 'y', ' ', 'f', 'd', '.', ' ', 'B', 'B', 'Y', ' ', 'F', 'D', '.']
 
+"""When you use a caret ^ outside a regex class it means that the match must occur at the beginning of a string"""
+
+beginnin_match = re.compile(r'^Hello')
+
+test_caret_beginning = beginnin_match.search('Hallo, world! Hello')
+
+print(test_caret_beginning == None) # It's True because Hello is at the end, it won't match it so the return value is None
+
+
+
 
 
 
