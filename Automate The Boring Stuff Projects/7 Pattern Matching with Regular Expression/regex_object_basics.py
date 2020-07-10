@@ -103,7 +103,7 @@ mo3 = bat_optional_regex_star.search('The Advetures of Batwowowowowoman') # Matc
 
 print(mo3.group())
 
-print("\n\n--------------Matching Zero or More with the Star +    -----------------\n\n")
+print("\n\n--------------Matching One or More with the Star +    -----------------\n\n")
 
 # The + character means match one or more. If there's zero it won't match anything
 
