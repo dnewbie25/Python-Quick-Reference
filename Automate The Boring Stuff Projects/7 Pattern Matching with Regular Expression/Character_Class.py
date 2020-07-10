@@ -46,7 +46,29 @@ test_caret_beginning = beginnin_match.search('Hallo, world! Hello')
 
 print(test_caret_beginning == None) # It's True because Hello is at the end, it won't match it so the return value is None
 
+"""The $ sign means the regex must end with the specified string"""
 
+end_with_Regex = re.compile(r'\d$') #The string must end with a number
+
+test_ending_1 = end_with_Regex.search('Your number is 42 followed by three')
+
+print(test_ending_1 == None) # returns True because the string ends with letters
+
+test_ending_2 = end_with_Regex.search('Your number is 43')
+
+print(test_ending_2.group()) # returns the last digit, 3
+
+# a string that starts and end with a number
+
+start_end_Regex = re.compile(r'^\d+$') # it means the match should start and end with a number, no matter the length of the number (that's why we put a + sign)
+
+test_start_end = start_end_Regex.search('125412 followed by 1124') 
+
+print(test_start_end == None) # returns True because there are letters
+
+test_start_end_2 = start_end_Regex.search('1245424242')
+
+print(test_start_end_2.group()) # returns the number 1245424242
 
 
 
