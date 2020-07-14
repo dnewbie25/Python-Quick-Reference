@@ -56,13 +56,25 @@ for groups in phoneRegex.findall(text): # loop through all the groups that match
   # remember groups( ) return a tuple
 
   # this one formats the phone number, group 1 is area, first 3 digits, last 4 digits and extension digits
-  phoneNum = '-'.join([groups[1], groups[3], groups[5]]) # join adds the values in the array with '-' as a separator
+  phoneNum = '-'.join([groups[1], groups[3], groups[5]]) # join adds the values in the array with '-' as a separator. This is the format we want
   if groups[8] != '': # if extension number is not empty, then add 'x EXTENSION NUMBER'
     phoneNum += ' x' + groups[8]
   matches.append(phoneNum)
 
 for groups in emailRegex.findall(text): # loops through the text and searches for the emails
-  matches.append(groups[0]) # adds every email to the matches list
+  matches.append(groups[0]) # adds every email to the matches list as final items
 
 """Copy results to the clipboard"""
+
+# pyperclip.copy( ) can copy just strings not lists so you need to be tricky here and use join( )
+
+if len(matches) > 0: # if it actually has phone and emails
+  pyperclip.copy('\n'.join(matches)) # separate each phone and email found by new line
+  print('Copied to clipboard:')
+  print('\n'.join(matches))
+else: # if matches has no items
+  print('No phone numbers or email addresses found.')
+
+
+
 
