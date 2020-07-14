@@ -46,10 +46,23 @@ emailRegex = re.compile(r'''(
 
 )''', re.VERBOSE)
 
-"""Find matches in clipboard"""
+"""Find matches in clipboard text"""
 
+text = str(pyperclip.paste()) # stores the text in the clipboard
 
+matches = [] # list for actual matches in the text
 
+for groups in phoneRegex.findall(text): # loop through all the groups that match the phoneRegex
+  # remember groups( ) return a tuple
+
+  # this one formats the phone number, group 1 is area, first 3 digits, last 4 digits and extension digits
+  phoneNum = '-'.join([groups[1], groups[3], groups[5]]) # join adds the values in the array with '-' as a separator
+  if groups[8] != '': # if extension number is not empty, then add 'x EXTENSION NUMBER'
+    phoneNum += ' x' + groups[8]
+  matches.append(phoneNum)
+
+for groups in emailRegex.findall(text): # loops through the text and searches for the emails
+  matches.append(groups[0]) # adds every email to the matches list
 
 """Copy results to the clipboard"""
 
