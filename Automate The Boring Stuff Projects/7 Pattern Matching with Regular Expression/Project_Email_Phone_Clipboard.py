@@ -13,7 +13,7 @@ import re, pyperclip
 
 # Get the text off the clipboard
 
-clipboard_text = str(pyperclip.paste()) # this one stores everything copied in the clipboard_text variable
+clipboard_text = str(pyperclip.paste()) # this one stores everything copied in the cipboard to the clipboard_text variable
 
 # Search for phones and email. By using ''' you will be able to add commens to the regex
 
@@ -39,20 +39,20 @@ emailRegex = re.compile(r'''(
 # first you put the data in a list
 matches = []
 
-for groups in phonesRegex.findall(clipboard_text):
+for groups in phonesRegex.findall(clipboard_text): # loops throguh clipboard_text searching for phones
   phone_number = '-'.join([groups[1], groups[3], groups[5]])
   if groups[6] != '':
     phone_number += ' extension ' + groups[8]
   
   matches.append(phone_number)
 
-for groups in emailRegex.findall(clipboard_text):
+for groups in emailRegex.findall(clipboard_text): # loops throguh clipboard_text searching for emails
   matches.append(groups[0])
 
 # then you paste it in the console
 
 if len(matches) > 0:
-  pyperclip.copy('\n'.join(matches))
+  pyperclip.copy('\n'.join(matches)) # copies everything in the matches list with a new line for every item
   print("Copied to clipboard:")
   print('\n'.join(matches))
 else:
