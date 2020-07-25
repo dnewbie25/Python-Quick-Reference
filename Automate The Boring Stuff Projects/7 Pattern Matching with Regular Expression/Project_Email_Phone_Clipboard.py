@@ -45,6 +45,7 @@ for groups in phonesRegex.findall(clipboard_text): # loops throguh clipboard_tex
     phone_number += ' extension ' + groups[8]
   
   matches.append(phone_number)
+print(matches)
 
 for groups in emailRegex.findall(clipboard_text): # loops throguh clipboard_text searching for emails
   matches.append(groups[0])
