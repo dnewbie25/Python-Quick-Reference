@@ -76,3 +76,31 @@ print(denied_regex)
 # You can specify regexes to allow and regexes to block. Below the statement allows 'caterpillar' and 'category' but blocks every toher string that starts with 'cat'
 override_regexes = pyip.inputStr("Enter a word starting with 'cat': ",allowRegexes=[r'caterpillar', 'category'], blockRegexes=[r'cat'])
 print(override_regexes)
+
+print("---------------   parsing custom input with inputCustom( )   -------------------------")
+
+"""With this function you can create your own validations, like adding numbers that adds up to 10 or even numbers only"""
+
+# inputCustom( ) to create a function that sums the digits of the number so they add up to 10
+
+def addsUpToTen(numbers):
+
+  numbersList = list(numbers) # creates a list separating each character, for example 234 --> ['2', '3', '4']
+
+  for i, digit in enumerate(numbersList): # It creates an enumerate object, which is the count number (in this case 0 unless we specify another) and the item in the list
+     
+    numbersList[i] = int(digit) # takes the index in the 2-tuple and use that to converte the element in the list to an integer
+
+  '''
+  Explanation of the above: An enumerate will create something like this (0, '2'), (1, '3'), (2, '4')
+  with this code we make sure that every digit (the second element in the tuple which we call by using the index) will be converted to integer
+  '''
+
+  if sum(numbersList) != 10: # if the sum of the elements in the array is different from 10 raises an exception
+    raise Exception(f'The digits must add up to 10, not {sum(numbersList)}')
+
+  return int(numbers)
+
+test_custom_input = pyip.inputCustom(addsUpToTen) # the exception created before makes that inputCustom() runs until a valid input gets entered
+
+print(test_custom_input)
