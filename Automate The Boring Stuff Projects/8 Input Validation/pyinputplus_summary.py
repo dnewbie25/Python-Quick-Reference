@@ -52,10 +52,27 @@ print("---------------   limit, timeout and default arguments    ---------------
 
 # when you want to specify a limit number of attempts to enter the data or a limit time to enter it you can use these arguments
 
-timerInput = pyip.inputYesNo("The reactor will nlow up. Do you want to stop the Uranium enrichment?: ", timeout=3, blank=True) # 3 seconds. If the user does not enter anything within 3 seconds a TimeoutException error will raise
+timerInput = pyip.inputYesNo("The reactor will nlow up. Do you want to stop the Uranium enrichment?: ", timeout=10, blank=True) # 3 seconds. If the user does not enter anything within 3 seconds a TimeoutException error will raise
 
 limitInput = pyip.inputNum("You have 3 attempts to enter the number I'm thinking of: ", limit=3) # 3 attempts
 
 defaultInput = pyip.inputNum("Enter a number or let the program enter my favorite number: ", limit=2, default=10) # enters 10 if the user does not enter any number
 
 print(defaultInput) # prints 10 or the number entered by the user
+
+print("---------------   allowRegexes and blockRegexes arguments   -------------------------------")
+
+"""
+These two keywords allow you to define a regex to determine whether the input is valid or not. You can define what's the expected input
+"""
+
+allowed_regex = pyip.inputNum("Enter a Roman Number: ",allowRegexes=[r'(I|V|X|L|C|D|M)+', r'zero']) # allows roman numbers or 'zero'
+print(allowed_regex)
+
+denied_regex = pyip.inputNum("Enter a decimal number: ", blockRegexes=[r'(I|V|X|L|C|D|M)+', r'zero']) # restricts roman numbers and 'zero' word.
+print(denied_regex)
+
+
+# You can specify regexes to allow and regexes to block. Below the statement allows 'caterpillar' and 'category' but blocks every toher string that starts with 'cat'
+override_regexes = pyip.inputStr("Enter a word starting with 'cat': ",allowRegexes=[r'caterpillar', 'category'], blockRegexes=[r'cat'])
+print(override_regexes)
