@@ -10,7 +10,7 @@ inputMenu() --> provides a menu with numbers or letters
 
 inputDatetime() --> enter date and time
 
-inputYesNo() --> enter yes or no
+inputYesNo() --> enter yes or no, y or n. It's not case sensitive
 
 inputBool() --> enter True or False and returns a boolean value
 
